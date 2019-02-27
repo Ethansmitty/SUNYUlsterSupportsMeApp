@@ -1,149 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/home_screen_background" />
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:addStatesFromChildren="false"
-        android:columnCount="3">
-
-        <ImageButton
-            android:id="@+id/button19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toStartOf="@+id/button20"
-            app:layout_constraintTop_toTopOf="@+id/button20"
-            tools:srcCompat="@drawable/building" />
-
-        <ImageButton
-            android:id="@+id/button20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toStartOf="@+id/button21"
-            app:layout_constraintTop_toTopOf="@+id/button21"
-            tools:srcCompat="@drawable/dollar_sign" />
-
-        <ImageButton
-            android:id="@+id/button21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="168dp"
-            android:layout_marginEnd="28dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/u" />
-
-        <ImageButton
-            android:id="@+id/button22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintStart_toStartOf="@+id/button19"
-            app:layout_constraintTop_toBottomOf="@+id/button19"
-            tools:srcCompat="@drawable/people" />
-
-        <ImageButton
-            android:id="@+id/button23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintStart_toStartOf="@+id/button20"
-            app:layout_constraintTop_toBottomOf="@+id/button21"
-            tools:srcCompat="@drawable/info" />
-
-        <ImageButton
-            android:id="@+id/button24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="24dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintStart_toStartOf="@+id/button21"
-            app:layout_constraintTop_toBottomOf="@+id/button21"
-            tools:srcCompat="@drawable/book" />
-
-        <ImageButton
-            android:id="@+id/button25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="180dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintBottom_toTopOf="@+id/button28"
-            app:layout_constraintStart_toStartOf="@+id/button22"
-            tools:srcCompat="@drawable/grad_hat" />
-
-        <ImageButton
-            android:id="@+id/button26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="28dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toStartOf="@+id/button27"
-            app:layout_constraintTop_toTopOf="@+id/button27"
-            tools:src="@drawable/calendar" />
-
-        <ImageButton
-            android:id="@+id/button27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintStart_toStartOf="@+id/button24"
-            app:layout_constraintTop_toBottomOf="@+id/button24"
-            tools:src="@drawable/bus" />
-
-        <ImageButton
-            android:id="@+id/button28"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toEndOf="@+id/button25"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/button25"
-            app:layout_constraintTop_toTopOf="@+id/button29"
-            tools:src="@drawable/person" />
-
-        <ImageButton
-            android:id="@+id/button29"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toStartOf="@+id/button27"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/button26"
-            app:layout_constraintTop_toBottomOf="@+id/button27"
-            tools:src="@drawable/home" />
-
-        <ImageButton
-            android:id="@+id/button30"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="168dp"
-            android:background="@android:drawable/screen_background_light_transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/button27"
-            app:layout_constraintTop_toBottomOf="@+id/button27"
-            tools:src="@drawable/location" />
-    </android.support.constraint.ConstraintLayout>
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

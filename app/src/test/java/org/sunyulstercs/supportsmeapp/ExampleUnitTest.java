@@ -1,4 +1,4 @@
-package com.example.ethan.sunyulster;
+package org.sunyulstercs.supportsmeapp;
 
 import org.junit.Test;
 

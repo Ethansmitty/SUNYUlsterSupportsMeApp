@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">SUNY Ulster</string>
+    <string name="locationButtonDesc">Location</string>
+    <string name="homeButtonDesc">Home</string>
+    <string name="profileButtonDesc">Profile</string>
+    <string name="campusResourcesDesc">Campus Resources</string>
+    <string name="financialButtonDesc">Financial</string>
+    <string name="socialMediaButtonDesc">SUNY Ulster Social Media</string>
+    <string name="campusLifeButtonDesc">Get Involved on Campus</string>
+    <string name="officesButtonDesc">Important Offices</string>
+    <string name="libraryButtonDesc">Library Tools</string>
+    <string name="academicsButtonDesc">Student Life Info</string>
+    <string name="scheduleButtonDesc">Schedule/Class Info</string>
+    <string name="transportationButtonDesc">Transportation Information</string>
+    <string name="homeScreenBannerDesc">SUNY Ulster Banner</string>
 </resources>

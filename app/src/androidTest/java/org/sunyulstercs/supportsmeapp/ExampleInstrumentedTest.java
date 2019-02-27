@@ -1,4 +1,4 @@
-package com.example.ethan.sunyulster;
+package org.sunyulstercs.supportsmeapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.ethan.sunyulster", appContext.getPackageName());
+        assertEquals("org.sunyulstercs.supportsmeapp", appContext.getPackageName());
     }
 }
