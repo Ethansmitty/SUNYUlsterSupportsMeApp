@@ -5,7 +5,122 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/campusResourceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/campusResourcesDesc"
+        app:layout_constraintBottom_toTopOf="@+id/officesButton"
+        app:layout_constraintEnd_toStartOf="@+id/officesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        app:srcCompat="@drawable/building" />
+
+    <TextView
+        android:id="@+id/campusResourceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/campusResourcesDesc"
+        app:layout_constraintBottom_toTopOf="@+id/clubButton"
+        app:layout_constraintEnd_toEndOf="@+id/campusResourceButton"
+        app:layout_constraintStart_toStartOf="@+id/campusResourceButton"
+        app:layout_constraintTop_toBottomOf="@+id/campusResourceButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/financialButton"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/financialButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/officesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        app:srcCompat="@drawable/dollar_sign" />
+
+    <TextView
+        android:id="@+id/financialLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/financialButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/officesButton"
+        app:layout_constraintEnd_toEndOf="@+id/financialButton"
+        app:layout_constraintStart_toStartOf="@+id/financialButton"
+        app:layout_constraintTop_toBottomOf="@+id/financialButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/socialMediaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/socialMediaButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/officesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/officesButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        app:srcCompat="@drawable/u" />
+
+    <TextView
+        android:id="@+id/socialMediaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/socialMediaButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/libraryButton"
+        app:layout_constraintEnd_toEndOf="@+id/socialMediaButton"
+        app:layout_constraintStart_toStartOf="@+id/socialMediaButton"
+        app:layout_constraintTop_toBottomOf="@+id/socialMediaButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/clubButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/campusLifeButtonDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/officesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/team_lift" />
+
+    <TextView
+        android:id="@+id/clubsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/campusLifeButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/studentLifeButton"
+        app:layout_constraintEnd_toEndOf="@+id/clubButton"
+        app:layout_constraintStart_toStartOf="@+id/clubButton"
+        app:layout_constraintTop_toBottomOf="@+id/clubButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/officesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -20,25 +135,77 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/info" />
 
+    <TextView
+        android:id="@+id/officesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/officesButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/scheduleButton"
+        app:layout_constraintEnd_toEndOf="@+id/officesButton"
+        app:layout_constraintStart_toStartOf="@+id/officesButton"
+        app:layout_constraintTop_toBottomOf="@+id/officesButton"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="109dp"
+        android:id="@+id/libraryButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/financialButtonDesc"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        android:contentDescription="@string/libraryButtonDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/officesButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/dollar_sign" />
+        app:srcCompat="@drawable/book" />
+
+    <TextView
+        android:id="@+id/libraryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/libraryButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/transportationButton"
+        app:layout_constraintEnd_toEndOf="@+id/libraryButton"
+        app:layout_constraintStart_toStartOf="@+id/libraryButton"
+        app:layout_constraintTop_toBottomOf="@+id/libraryButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/studentLifeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/academicsButtonDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/officesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officesButton"
+        app:layout_constraintVertical_bias="0.256"
+        app:srcCompat="@drawable/grad_hat" />
+
+    <TextView
+        android:id="@+id/studentLifeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/academicsButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/profileButton"
+        app:layout_constraintEnd_toEndOf="@+id/studentLifeButton"
+        app:layout_constraintStart_toStartOf="@+id/studentLifeButton"
+        app:layout_constraintTop_toBottomOf="@+id/studentLifeButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/scheduleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,78 +218,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/officesButton"
         app:layout_constraintVertical_bias="0.256"
         app:srcCompat="@drawable/calendar" />
 
-    <ImageButton
-        android:id="@+id/imageButton4"
+    <TextView
+        android:id="@+id/scheduleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/libraryButtonDesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/book" />
+        android:text="@string/scheduleButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/homeButton"
+        app:layout_constraintEnd_toEndOf="@+id/scheduleButton"
+        app:layout_constraintStart_toStartOf="@+id/scheduleButton"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/campusLifeButtonDesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/team_lift" />
-
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/campusResourcesDesc"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/building" />
-
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/socialMediaButtonDesc"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/u" />
-
-    <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/transportationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -133,43 +246,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/officesButton"
+        app:layout_constraintTop_toBottomOf="@+id/officesButton"
         app:layout_constraintVertical_bias="0.287"
         app:srcCompat="@drawable/bus" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/academicsButtonDesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:layout_constraintVertical_bias="0.256"
-        app:srcCompat="@drawable/grad_hat" />
-
-    <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/profileButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/profileButtonDesc"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton11"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton11"
+        app:layout_constraintBottom_toBottomOf="@+id/homeButton"
+        app:layout_constraintEnd_toStartOf="@+id/homeButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton11"
+        app:layout_constraintTop_toTopOf="@+id/homeButton"
         app:srcCompat="@drawable/person" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -180,32 +276,45 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleButton"
         app:layout_constraintVertical_bias="0.75"
         app:srcCompat="@drawable/home" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/locationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/locationButtonDesc"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton11"
+        app:layout_constraintBottom_toBottomOf="@+id/homeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toTopOf="@+id/imageButton11"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintTop_toTopOf="@+id/homeButton"
         app:srcCompat="@drawable/location" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/bannerImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/homeScreenBannerDesc"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/financialButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home_banner" />
+
+    <TextView
+        android:id="@+id/transportationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/transportationButtonDesc"
+        app:layout_constraintBottom_toTopOf="@+id/locationButton"
+        app:layout_constraintEnd_toEndOf="@+id/transportationButton"
+        app:layout_constraintStart_toStartOf="@+id/transportationButton"
+        app:layout_constraintTop_toBottomOf="@+id/transportationButton"
+        app:layout_constraintVertical_bias="0.0" />
+
 </android.support.constraint.ConstraintLayout>
