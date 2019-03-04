@@ -130,6 +130,7 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/officesButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -198,11 +199,9 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:text="@string/academicsButtonDesc"
-        app:layout_constraintBottom_toTopOf="@+id/profileButton"
         app:layout_constraintEnd_toEndOf="@+id/studentLifeButton"
         app:layout_constraintStart_toStartOf="@+id/studentLifeButton"
-        app:layout_constraintTop_toBottomOf="@+id/studentLifeButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/studentLifeButton" />
 
     <ImageButton
         android:id="@+id/scheduleButton"
@@ -227,11 +226,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scheduleButtonDesc"
-        app:layout_constraintBottom_toTopOf="@+id/homeButton"
         app:layout_constraintEnd_toEndOf="@+id/scheduleButton"
         app:layout_constraintStart_toStartOf="@+id/scheduleButton"
-        app:layout_constraintTop_toBottomOf="@+id/scheduleButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/scheduleButton" />
 
     <ImageButton
         android:id="@+id/transportationButton"
@@ -247,7 +244,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
         app:layout_constraintTop_toBottomOf="@+id/officesLabel"
-        app:layout_constraintVertical_bias="0.120000005"
+        app:layout_constraintVertical_bias="0.15"
         app:srcCompat="@drawable/bus" />
 
     <TextView
@@ -255,56 +252,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/transportationButtonDesc"
-        app:layout_constraintBottom_toTopOf="@+id/locationButton"
         app:layout_constraintEnd_toEndOf="@+id/transportationButton"
         app:layout_constraintStart_toStartOf="@+id/transportationButton"
-        app:layout_constraintTop_toBottomOf="@+id/transportationButton"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <!-- TODO: Use a Fragment for these bottom buttons.-->
-
-    <ImageButton
-        android:id="@+id/profileButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/profileButtonDesc"
-        app:layout_constraintBottom_toBottomOf="@+id/homeButton"
-        app:layout_constraintEnd_toStartOf="@+id/homeButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/homeButton"
-        app:srcCompat="@drawable/person" />
-
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/homeButtonDesc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scheduleButton"
-        app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/home" />
-
-    <ImageButton
-        android:id="@+id/locationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/locationButtonDesc"
-        android:onClick="onLocationButtonClick"
-        app:layout_constraintBottom_toBottomOf="@+id/homeButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
-        app:layout_constraintTop_toTopOf="@+id/homeButton"
-        app:srcCompat="@drawable/location" />
+        app:layout_constraintTop_toBottomOf="@+id/transportationButton" />
 
     <ImageView
         android:id="@+id/bannerImageView"
@@ -316,5 +266,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home_banner" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="org.sunyulstercs.supportsmeapp.navFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleLabel" />
 
 </android.support.constraint.ConstraintLayout>

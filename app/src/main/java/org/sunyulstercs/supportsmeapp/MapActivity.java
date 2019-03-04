@@ -101,7 +101,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
             displayLocationSettingsRequest(this);
-            Toast.makeText(this, "User location enabled", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "User location enabled", Toast.LENGTH_SHORT).show();
         } else {
             //Prompt user for permission
             requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSION_FINE_LOCATION);
@@ -201,7 +201,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                                 resolvableApiException
                                         .startResolutionForResult(MapActivity.this, LOCATION_SETTINGS_REQUEST);
                             } catch (IntentSender.SendIntentException e) {
-
+                                Log.e("MapActivity", e.getMessage());
                             }
                             break;
                         case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
