@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements navFragment.OnFragmentInteractionListener, View.OnClickListener
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
 
     @Override
@@ -16,15 +16,6 @@ public class MainActivity extends AppCompatActivity implements navFragment.OnFra
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen);
     }
-
-    @Override
-    public void onFragmentInteraction(Uri uri)
-    {
-        Log.d(uri.toString(), "Fragment was touched");
-    }
-
-
-
 
     @Override
     public void onClick(View view)
