@@ -13,7 +13,8 @@
     <string name="transportationButtonDesc">Transportation Info</string>
     <string name="homeScreenBannerDesc">SUNY Ulster Banner</string>
 
-    <string name="title_activity_map">MapDemo</string>
+    <string name="title_activity_map">Campus Map</string>
+    <string name="title_activity_info">InfoActivity</string>
     <string name="ulster_desc">SUNY Ulster\\n491 Cottekill Rd, Stone Ridge, NY\\n12484</string>
     <string name="normal">Normal</string>
     <string name="hybrid">Hybrid</string>

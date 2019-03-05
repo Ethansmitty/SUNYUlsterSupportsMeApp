@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements navFragment.OnFra
             break;
         }
         Log.d(view.toString(), "Starting activity...");
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 }

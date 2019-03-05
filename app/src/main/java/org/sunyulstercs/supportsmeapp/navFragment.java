@@ -86,11 +86,13 @@ public class navFragment extends Fragment implements View.OnClickListener {
         {
             case R.id.homeButton :
                 Intent homeIntent = new Intent(this.getContext(), MainActivity.class);
+                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
                 break;
 
             case R.id.locationButton :
                 Intent mapIntent = new Intent(this.getContext(), MapActivity.class);
+                mapIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(mapIntent);
                 break;
 
