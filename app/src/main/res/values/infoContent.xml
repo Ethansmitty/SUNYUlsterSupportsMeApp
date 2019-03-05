@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!--Offices -->
+    <string name="nurseTitle">"Nurse"</string>
+    <string name="nurseDesc">"The place to go if you need first aid treatment, medical emergency care, blood pressure checks, health information, treatment referrals, immunization requirements and onsite clinics.\nSEN 139"</string>
+    <string name="nurseLink">"https://www.sunyulster.edu/campus_and_culture/campus_resources/health_services"</string>
+    <string name="nursePhone">"845–687–5246"</string>
+
+    <string name="disabilityTitle">Disabilities Office</string>
+    <string name="disabilityDesc">Students with disabilities can come here to discuss their needs and accommodations that must be made in advance.\nVAN 101</string>
+    <string name="disabilityLink" tools:ignore="Typos">https://www.sunyulster.edu/student_handbook/accomodations.php</string>
+    <string name="disabilityPhone">845–687–5121</string>
+
+    <string name="trioTitle">TRIO/Student Support Services</string>
+    <string name="trioDesc">Any Military member past or present may qualify for special help based on their service history. Every returning vet needs a custom plan to succeed, get that here.</string>
+    <string name="trioLink">https://www.sunyulster.edu/student_handbook/veterans_affairs.php</string>
+    <string name="trioPhone">845–688–6003</string>
+
+    <string name="publicSafetyTitle">Public Safety</string>
+    <string name="publicSafetyDesc">At SUNY Ulster, students, faculty, staff and visitors can feel safe and secure in our close-knit community campus protected by our Office of Public Safety and Security.\nHASBROUCK HALL LOBBY</string>
+    <string name="publicSafetyLink">https://www.sunyulster.edu/campus_and_culture/safety_security/</string>
+    <string name="publicSafetyPhone">845–687–5053</string>
+
+    <string name="careerTitle">Career Services</string>
+    <string name="careerDesc">Get help with the life-long process of career development from trained counselors who can help you with everything from choosing a major that leads to the career you want, to conducting a job search to find employment in your chosen field.\nVAN 119</string>
+    <string name="careerLink">https://www.sunyulster.edu/admissions/career_transfer_planning.php</string>
+    <string name="careerPhone">845–687–5091</string>
+
+    <string name="learningTitle">Learning Center</string>
+    <string name="learningDesc">Your spot for a variety of academic support services to help enhance your college success, complete with computers, WIFI access and a study area available\nVAN 247</string>
+    <string name="learningLink">https://www.sunyulster.edu/student_handbook/learning_center.php</string>
+    <string name="learningPhone">845–687–5039</string>
+
+    <string name="openLabsTitle">Open Labs Guide</string>
+    <string name="openLabsDesc">There is a place to work and study all week, every week at SUNY Ulster. Find out where here.</string>
+    <string name="openLabsLink">https://www.sunyulster.edu/campus_and_culture/campus_resources/technology</string>
+
+    <string-array name="officesList">
+        <item>@string/nurseTitle</item>
+        <item>@string/disabilityTitle</item>
+        <item>@string/trioTitle</item>
+        <item>@string/publicSafetyTitle</item>
+        <item>@string/careerTitle</item>
+        <item>@string/learningTitle</item>
+        <item>@string/openLabsTitle</item>
+    </string-array>
+</resources>

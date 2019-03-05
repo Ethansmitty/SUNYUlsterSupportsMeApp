@@ -24,8 +24,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch(view.getId())
         {
-            case R.id.officesButton : intent.setClass(this, InfoActivity.class);
-            break;
+            case R.id.officesButton :
+                intent.setClass(this, InfoActivity.class);
+                String string[] = getResources().getStringArray(R.array.officesList);
+                intent.putExtra("ListItems", string);
+                intent.putExtra("ActivityName", getResources().getString(R.string.officesButtonDesc));
+                break; //TODO: Add other info values
         }
         Log.d(view.toString(), "Starting activity...");
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
