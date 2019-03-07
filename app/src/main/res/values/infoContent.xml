@@ -221,6 +221,9 @@
     </string-array>
 
     <string name="snapchatTitle">Snapchat</string>
+    <string-array name="snapchatList">
+        <item>@string/snapchatTitle</item>
+    </string-array>
 
     <string name="youtubeTitle">YouTube</string>
     <string name="youtubeLink">https://www.youtube.com/user/SUNYUlster</string>
@@ -452,6 +455,9 @@
     </string-array>
 
     <string name="buildingHistoryTitle">History of SUNY Ulster Buildings</string>
+    <string-array name="buildingHistoryList">
+        <item>@string/buildingHistoryTitle</item>
+    </string-array>
 
     <string-array name="libraryList">
         <item>@string/loanedBooksTitle</item>

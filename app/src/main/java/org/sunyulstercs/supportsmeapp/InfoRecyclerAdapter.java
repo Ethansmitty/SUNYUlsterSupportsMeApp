@@ -13,15 +13,18 @@ public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapte
 
     //List of stuff to display
     private String[] infoList;
+    private String[][] catList;
 
     /**
      * Constructor for adapter
      * @param infoList List of items to display
+     * @param catList Array of all the category's data, to be selected and passed.
      * @param context Application context
      */
-    InfoRecyclerAdapter(String[] infoList, Context context)
+    InfoRecyclerAdapter(String[] infoList, String[][] catList, Context context)
     {
         this.infoList = infoList;
+        this.catList = catList;
     }
 
     /**
@@ -38,6 +41,10 @@ public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapte
     public void onBindViewHolder(InfoRecyclerAdapter.InfoRecyclerViewHolder holder, int position)
     {
         holder.text.setText(infoList[position]); //Set text for this cell from list.
+        if (catList != null)
+        {
+            holder.text.setTag(catList[position]);
+        }
 
     }
 
