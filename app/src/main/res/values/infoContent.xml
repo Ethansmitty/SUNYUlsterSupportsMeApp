@@ -1,6 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-<!--Offices -->
+    <!-- Campus Resources -->
+    <string name="srMapTitle">Stone Ridge Campus Map</string>
+    <string name="srCampusMapDesc">Use this tool to find your way around the SUNY Ulster campus located at 491 Cottekill Road, Stone Ridge, NY, 12484</string>
+
+    <string name="kcMapTitle">Kingston Center Map</string>
+    <string name="kcMapDesc">Use this tool to help find your way around the satellite SUNY Ulster campus located at 94 Marys Ave, Kingston NY, 12401</string>
+
+    <string name="childcareTitle">Childcare</string>
+    <string name="childcareDesc">Students with young ones can use this feature to find a childcare program that offers you the right philosophies, policies, and hours that fit your family needs in the Children’s Center.</string>
+    <string name="childcareLink">https://www.sunyulster.edu/campus_and_culture/campus_resources/childcare</string>
+
+    <string name="diningTitle">Dining Options</string>
+    <string name="diningDesc">Discover the grub hubs on campus, fully serviced by Lessing’s. Find out their hours of operation, locations, available options and specials.</string>
+    <string name="diningLink">https://www.sunyulster.edu/student_handbook/food_service.php</string>
+
+    <string name="bookstoreTitle">Senator Bookstore</string>
+    <string name="bookstoreDesc">The place to find all the supplies needed for any SUNY Ulster degree; including textbooks, pens, notebooks, college merchandise, and more with staff ready to help you at every turn.</string>
+    <string name="bookstoreLink">https://www.bkstr.com/sunyulstercountystore/home</string>
+
+    <string name="counselingTitle">Counseling</string>
+    <string name="counselingDesc">Students can get help from short-term counseling for issues involving mental health, alcohol or substance abuse, careers, and life skills.</string>
+    <string name="counselingLink">https://www.sunyulster.edu/student_handbook/counseling.php</string>
+
+    <string name="freshStartTitle">Fresh Start</string>
+    <string name="freshStartDesc">Apply for the chance to start over at SUNY Ulster after a hiatus from the college (2yr+) with a new GPA.</string>
+    <string name="freshStartLink">https://www.sunyulster.edu/admissions/info/fresh_start_policy.php</string>
+
+    <string name="safeSpaceTitle">Safe Space</string>
+    <string name="safeSpaceDesc">Our academic community values and respects diversity among our students, faculty, and staff who are committed to fostering an academic environment where there is zero tolerance for any and all forms of homophobia and everyone is free to express emotional and sexual preferences.</string>
+    <string name="safeSpaceLink">https://www.sunyulster.edu/campus_and_culture/campus_resources/safe_space</string>
+
+    <string name="foodPantryTitle">Boutique and Food Pantry</string>
+    <string name="foodPantryDesc">Find out when and where you can go on campus to get cost free food and clothing if you need it, no proof needed. Just stop by during open hours!</string>
+
+    <string name="tutorTitle">Tutoring by Subject (online and in-person)</string>
+    <string name="tutorDesc">Receive any academic help you need with one of our tutors within the college community.   (More info on in person tutoring can be found on the portal, in the student resources tab under the Academic Support Resources banner, click on the learning center.)</string>
+    <string name="tutorLink">https://www.starny.org/tutoring_schedule</string>
+
+    <string-array name="resourcesList">
+        <item>@string/srMapTitle</item>
+        <item>@string/kcMapTitle</item>
+        <item>@string/childcareTitle</item>
+        <item>@string/diningTitle</item>
+        <item>@string/bookstoreTitle</item>
+        <item>@string/counselingTitle</item>
+        <item>@string/freshStartTitle</item>
+        <item>@string/safeSpaceTitle</item>
+        <item>@string/foodPantryTitle</item>
+        <item>@string/tutorTitle</item>
+    </string-array>
+
+    <!-- Financial -->
+    <string name="givingTitle">Giving</string>
+    <string name="givingDesc">Be a contributor to the school’s scholarship fund to help enrolling students in need to create the successful career they need to Start Here, Go Far!</string>
+    <string name="givingLink">https://www.sunyulster.edu/foundation/giving/index.php</string>
+
+    <string name="financialAidTitle">Financial Aid</string>
+    <string name="financialAidDesc">These faculty are here to advocate, so there’s no need to stress. They’ve helped thousands of students over the years, and can guide you and your family through the financial aid process.</string>
+    <string name="financialAidLink">https://www.sunyulster.edu/admissions/financial_aid/</string>
+
+    <string name="scholarshipTitle">Scholarship Opportunities</string>
+    <string name="scholarshipDesc">Apply for one of the many scholarship opportunities presented by the SUNY Ulster Foundation.</string>
+    <string name="scholarshipLink">https://www.sunyulster.edu/foundation/scholarships/applications/index.php</string>
+
+    <string name="studentAccountsTitle">My Student Accounts</string>
+    <string name="studentAccoountsDesc">View and pay your accounts for tuition and fees. See your receipt(s) and what you may owe.</string>
+    <string name="studentAccountsLink">https://banssb.sunyulster.edu:9000/PROD/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu</string>
+
+    <string name="paymentPlanTitle">Payment Plans</string>
+    <string name="paymentPlanDesc">Budget your education’s cost better by paying it in easy monthly installments throughout that semester of classes.</string>
+    <string name="paymentPlanLink">https://www.sunyulster.edu/admissions/tuition_fees/payment_plan.php</string>
+
+    <string name="eopTitle">Educational Opportunity Program</string>
+    <string name="eopDesc">SUNY Ulster\'s Educational Opportunity Program provides academic support and financial aid to students who show promise for mastering college-level work, must be NY state residents.</string>
+    <string name="eopLink">https://www.sunyulster.edu/admissions/educational-opportunity-program/#top</string>
+
+    <string name="costCalcTitle">Cost Calculator</string>
+    <string name="costCalcDesc">Our Net Price Calculator will provide you and your family with an early estimate of the financial aid for which you might qualify.</string>
+    <string name="costCalcLink">https://www.suny.edu/howmuch/netpricecalculator.xhtml</string>
+
+    <string-array name="financialList">
+        <item>@string/givingTitle</item>
+        <item>@string/financialAidTitle</item>
+        <item>@string/scholarshipTitle</item>
+        <item>@string/studentAccountsTitle</item>
+        <item>@string/paymentPlanTitle</item>
+        <item>@string/eopTitle</item>
+        <item>@string/costCalcTitle</item>
+    </string-array>
+
+    <!--Social Media -->
+    <string name="artSiteTitle">Art Website</string>
+    <string name="artSiteDesc">Take a look at our thriving arts programs, a rich source of programming for the community.</string>
+    <string name="artSiteLink">http://arts.sunyulster.edu/</string>
+
+    <string name="athleticsTitle">Athletics Website</string>
+    <string name="athleticsDesc">Looking to join a sports team, or to just come rally for and support our Senators? This is the right place to look!</string>
+    <string name="athleticsLink">https://athletics.sunyulster.edu/</string>
+
+    <string name="facebookTitle">Facebook</string>
+    <string name="facebookLink">https://www.facebook.com/sunyulster/</string>
+
+    <string name="instagramTitle">Instagram</string>
+    <string name="instagramLink">https://www.instagram.com/sunyulster/</string>
+
+    <string name="twitterTitle">Twitter</string>
+    <string name="twitterLink">https://twitter.com/SUNYUlster</string>
+
+    <string name="linkedinTitle">LinkedIn</string>
+    <string name="linkedinLink">https://www.linkedin.com/school/suny-ulster/</string>
+
+    <string name="snapchatTitle">Snapchat</string>
+
+    <string name="youtubeTitle">YouTube</string>
+    <string name="youtubeLink">https://www.youtube.com/user/SUNYUlster</string>
+
+    <string name="blogTitle">Voices Blog</string>
+    <string name="blogLink">http://blog.sunyulster.edu/</string>
+
+    <string-array name="socialList">
+        <item>@string/artSiteTitle</item>
+        <item>@string/athleticsTitle</item> //TODO Add this to campus life
+        <item>@string/facebookTitle</item>
+        <item>@string/instagramTitle</item>
+        <item>@string/twitterTitle</item>
+        <item>@string/linkedinTitle</item>
+        <item>@string/snapchatTitle</item>
+        <item>@string/youtubeTitle</item>
+        <item>@string/blogTitle</item>
+    </string-array>
+
+    <!--Get Involved on Campus-->
+    <string name="clubsTitle">Clubs</string>
+    <string name="clubsDesc">Pick your passion and join the club! Clubs are formed around all kinds of concepts and subjects, if you don’t see one you like, start your own club at SUNY Ulster.</string>
+    <string name="clubsLink">https://www.sunyulster.edu/campus_and_culture/clubs/</string>
+
+    <string name="studentGovTitle">Student Government</string>
+    <string name="studentGovDesc">Help maintain a cooperative relationship among students, faculty, staff, and the outside community and work to ensure that the social needs and responsibilities of students are being met.</string>
+    <string name="studentGovLink">https://www.sunyulster.edu/campus_and_culture/leadership_opportunities/</string>
+
+    <string name="eventCalendarTitle">Calendar of Special Events</string>
+    <string name="eventCalendarDesc">Check out what’s happening on campus, get the most out of your time at SUNY Ulster.</string>
+    <string name="eventCalendarLink">https://apps.sunyulster.edu/events/</string>
+
+    <string name="honorsTitle">Honors Program</string>
+    <string name="honorsDesc">Open yourself to opportunities like more transfer options, smaller class sizes and a higher standard of education.</string>
+    <string name="honorsLink">https://www.sunyulster.edu/academics/honors_program.php</string>
+
+    <string name="coilTitle">Study with students abroad by COIL</string>
+    <string name="coilDesc">COIL allows students to work with counterparts across the world on a number of subjects through technological resources.</string>
+    <string name="coilLink">https://www.sunyulster.edu/academics/going_global/coil.php</string>
+
+    <string name="diversityTitle">Diversity</string>
+    <string name="diversityDesc">Join other students in diversity celebrations across campus throughout the semester. SUNY Ulster is proud to maintain a welcoming environment to everyone.</string>
+    <string name="diversityLink">https://www.sunyulster.edu/campus_and_culture/diversity.php</string>
+
+    <string name="weeklyCampusTitle">This Week on Campus</string>
+    <string name="weeklyCampusDesc">Stay up to date on everything SUNY Ulster by checking in here regularly.</string>
+
+    <string-array name="campusLifeList">
+        <item>@string/clubsTitle</item>
+        <item>@string/studentGovTitle</item>
+        <item>@string/eventCalendarTitle</item>
+        <item>@string/athleticsTitle</item>
+        <item>@string/honorsTitle</item>
+        <item>@string/coilTitle</item>
+        <item>@string/diversityTitle</item>
+        <item>@string/weeklyCampusTitle</item>
+    </string-array>
+
+    <!--Offices -->
     <string name="nurseTitle">"Nurse"</string>
     <string name="nurseDesc">"The place to go if you need first aid treatment, medical emergency care, blood pressure checks, health information, treatment referrals, immunization requirements and onsite clinics.\nSEN 139"</string>
     <string name="nurseLink">"https://www.sunyulster.edu/campus_and_culture/campus_resources/health_services"</string>
@@ -43,5 +213,110 @@
         <item>@string/careerTitle</item>
         <item>@string/learningTitle</item>
         <item>@string/openLabsTitle</item>
+    </string-array>
+
+    <!--Library Tools-->
+    <string name="loanedBooksTitle">Books on Loan</string>
+    <string name="loanedBooksDesc">Take a look at what books you have checked out and when they are due back at DeWitt.</string>
+
+    <string name="hoursTitle">Library Hours</string>
+    <string name="hoursDesc">Learn when the campus library opens and closes during the semester.</string>
+    <string name="hoursLink">https://www.sunyulster.edu/library/library_hours.php</string>
+
+    <string name="reserveRoomTitle">Reserve a room at Dewitt</string>
+    <string name="reserveRoomDesc">Call ahead so that you and your study buddies have a set place to prep yourselves. There are several group meeting rooms available for student collaboration.</string>
+    <string name="reserveRoomLink">https://libguides.sunyulster.edu/start</string>
+
+    <string name="librarianTitle">Contact a Librarian</string>
+    <string name="librarianDesc">Get help from a librarian in DeWitt, they offer support for loans, research, formatting and more.</string>
+    <string name="librarianLink">ttps://www.sunyulster.edu/library/contact.php</string>
+
+    <string name="interlibraryTitle">Interlibrary Loan</string>
+    <string name="interlibraryDesc">Request a book loan from another library in the country, almost any book can be obtained for you to learn from!</string>
+    <string name="interlibraryLink">https://sunyulster.illiad.oclc.org/illiad/logon.html</string>
+
+    <string name="buildingHistoryTitle">History of SUNY Ulster Buildings</string>
+
+    <string-array name="libraryList">
+        <item>@string/loanedBooksTitle</item>
+        <item>@string/hoursTitle</item>
+        <item>@string/reserveRoomTitle</item>
+        <item>@string/librarianTitle</item>
+        <item>@string/interlibraryTitle</item>
+        <item>@string/buildingHistoryTitle</item>
+    </string-array>
+
+    <!--Student Life Info-->
+    <string name="advisorTitle">Advisors</string>
+    <string name="advisorDesc">Who is your advisor? Find out here!</string>
+
+    <string name="calendarTitle">Calendar</string>
+    <string name="calendarDesc">Make appointments, schedule meetings, set up reminders to study or to leave early for a test. Use this tool as your personal planner for all things SUNY Ulster.</string>
+
+    <string name="handbookTitle">Student Handbook</string>
+    <string name="handbookDesc">Part of keeping SUNY Ulster a place where everyone feels safe and welcome requires your help and participation in all the guidelines found here. Take a gander.</string>
+    <string name="handbookLink">https://www.sunyulster.edu/student_handbook/</string>
+
+    <string name="campusNewsTitle">Campus News and Alerts</string>
+    <string name="campusNewsDesc">Check out what’s happening this week, see any holiday schedule changes and check for any cancellation/delays.</string>
+    <string name="campusNewsLink">https://www.sunyulster.edu/campus_and_culture/safety_security/weather</string>
+
+    <string name="majorTitle">My Major and Requirements</string>
+    <string name="majorDesc">Take a look at the major you are enrolled in with the college and see how many classes you’ve taken and have yet to take before you graduate.</string>
+    <string name="majorLink">https://uls.degreeworks.suny.edu</string>
+
+    <string-array name="studentLifeList">
+        <item>@string/advisorTitle</item>
+        <item>@string/calendarTitle</item>
+        <item>@string/handbookTitle</item>
+        <item>@string/campusNewsTitle</item>
+        <item>@string/majorTitle</item>
+    </string-array>
+
+    <!-- Schedule/Class info-->
+    <string name="catalogTitle">College Catalog</string>
+    <string name="catalogDesc">See the upcoming classes that you can take at SUNY Ulster.</string>
+    <string name="catalogLink">http://catalog.sunyulster.edu/</string>
+
+    <string name="testingCalendarTitle">Student Testing Calendar</string>
+    <string name="testingCalendarDesc">Find out when and where your midterms and final testings will be held here.</string>
+
+    <string name="scheduleTitle">My Semester Schedule</string>
+    <string name="scheduleDesc">What classes are you taking on what day and where? Don’t worry, you can always find out here.</string>
+
+    <string name="internshipsTitle">Internships</string>
+    <string name="internshipsDesc">The edge you need to be set above all the rest, practical work experience in your chosen field. Take a look at some of the impressive placements students have gotten from a SUNY Ulster internship.</string>
+    <string name="internshipsLink">https://www.sunyulster.edu/academics/achieve_more/</string>
+
+    <string name="transcriptsTitle">Transcripts</string>
+    <string name="transcriptsDesc">View your unofficial transcript and request an official version from the Registrar with this feature.</string>
+    <string name="transcriptsLink">https://www.sunyulster.edu/admissions/forms/index#transcripts</string>
+
+    <string-array name="scheduleList">
+        <item>@string/catalogTitle</item>
+        <item>@string/testingCalendarTitle</item>
+        <item>@string/scheduleTitle</item>
+        <item>@string/internshipsTitle</item>
+        <item>@string/transcriptsTitle</item>
+    </string-array>
+
+    <!--Transportation Info-->
+    <string name="parkingMapTitle">Parking Map</string>
+    <string name="parkingMapDesc">Find out where to park on campus according to your status at the college.</string>
+    <string name="parkingMapLink">https://www.sunyulster.edu/docs/campus_bulletins/parking_map_regulations.pdf</string>
+
+    <string name="busScheduleTitle">Bus Schedules</string>
+    <string name="busScheduleDesc">Download the UCAT app to easily access bus schedules, or click here.</string>
+    <string name="busScheduleLink">https://ulstercountyny.gov/ucat/bus-schedules</string>
+    <string name="busSchedulePhone">845–340–3333</string>
+
+    <string name="kcsuDirectionsTitle">Directions to KCSU</string>
+    <string name="kcsuDirectionsDesc">Be sure how to find your way to the Kingston Center of SUNY Ulster</string>
+    <string name="kcsuLink">https://www.sunyulster.edu/campus_and_culture/about_us/driving_directions.php</string>
+
+    <string-array name="transportList">
+        <item>@string/parkingMapTitle</item>
+        <item>@string/busScheduleTitle</item>
+        <item>@string/kcsuDirectionsTitle</item>
     </string-array>
 </resources>
