@@ -7,20 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 
 public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapter.InfoRecyclerViewHolder>
 {
 
     //List of stuff to display
-    private ArrayList<String> infoList;
+    private String[] infoList;
 
     /**
      * Constructor for adapter
      * @param infoList List of items to display
      * @param context Application context
      */
-    InfoRecyclerAdapter(ArrayList<String> infoList, Context context)
+    InfoRecyclerAdapter(String[] infoList, Context context)
     {
         this.infoList = infoList;
     }
@@ -38,7 +37,8 @@ public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapte
     @Override
     public void onBindViewHolder(InfoRecyclerAdapter.InfoRecyclerViewHolder holder, int position)
     {
-        holder.text.setText(infoList.get(position)); //Set text for this cell from list
+        holder.text.setText(infoList[position]); //Set text for this cell from list.
+
     }
 
     /**
@@ -46,7 +46,7 @@ public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapte
      */
     @Override
     public int getItemCount() {
-        return infoList.size();
+        return infoList.length;
     }
 
     /**

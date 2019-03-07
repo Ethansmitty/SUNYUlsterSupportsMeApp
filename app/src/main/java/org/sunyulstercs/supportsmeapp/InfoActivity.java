@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +17,7 @@ public class InfoActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<String> listItems = new ArrayList<>();
+    private String[] array;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,8 @@ public class InfoActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
         if (extras != null) {
-            String[] array = extras.getStringArray("ListItems"); //ListItems is a String array which will be displayed in RecyclerView
-            Collections.addAll(listItems, array); //Convert to ArrayList
+            array = extras.getStringArray("ListItems"); //ListItems is a String array which will be displayed in RecyclerView
+
 
             String s = extras.getString("ActivityName"); //Setting toolbar title based on which category this is
             getSupportActionBar().setTitle(s);
@@ -40,8 +42,18 @@ public class InfoActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new InfoRecyclerAdapter(listItems, getApplicationContext());
+        adapter = new InfoRecyclerAdapter(array, getApplicationContext());
         recyclerView.setAdapter(adapter);
     }
 
+
+    public void onItemClick(View v) {
+        TextView tv = (TextView) v;
+        switch (tv.getText().toString())
+        {
+
+        }
+
+
+    }
 }

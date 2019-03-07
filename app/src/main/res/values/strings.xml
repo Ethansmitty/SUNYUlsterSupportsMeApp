@@ -2,13 +2,13 @@
     <string name="locationButtonDesc">Location</string>
     <string name="homeButtonDesc">Home</string>
     <string name="profileButtonDesc">Profile</string>
-    <string name="campusResourcesDesc">Campus Resources</string>
+    <string name="campusResourcesButtonDesc">Campus Resources</string>
     <string name="financialButtonDesc">Financial</string>
     <string name="socialMediaButtonDesc">Social Media</string>
     <string name="campusLifeButtonDesc">Join and Attend</string>
     <string name="officesButtonDesc">Important Offices</string>
     <string name="libraryButtonDesc">Library Tools</string>
-    <string name="academicsButtonDesc">Student Life Info</string>
+    <string name="studentLifeButtonDesc">Student Life Info</string>
     <string name="scheduleButtonDesc">Schedule/Class Info</string>
     <string name="transportationButtonDesc">Transportation Info</string>
     <string name="homeScreenBannerDesc">SUNY Ulster Banner</string>

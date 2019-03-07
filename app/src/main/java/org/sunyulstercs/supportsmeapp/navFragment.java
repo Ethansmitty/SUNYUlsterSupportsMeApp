@@ -62,14 +62,18 @@ public class navFragment extends Fragment implements View.OnClickListener {
         switch (view.getId())
         {
             case R.id.homeButton :
-                Intent homeIntent = new Intent(this.getContext(), MainActivity.class);
-                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(homeIntent);
+                if (!(getActivity() instanceof MainActivity))  //If we're already home, do nothing
+                {
+                    Intent homeIntent = new Intent(this.getContext(), MainActivity.class);
+                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Clears stack when going home
+                    startActivity(homeIntent);
+                }
+
                 break;
 
             case R.id.locationButton :
                 Intent mapIntent = new Intent(this.getContext(), MapActivity.class);
-                mapIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                mapIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); //If activity is in the stack somewhere, reuse it.
                 startActivity(mapIntent);
                 break;
 

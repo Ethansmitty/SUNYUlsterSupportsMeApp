@@ -13,7 +13,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/campusResourcesDesc"
+        android:contentDescription="@string/campusResourcesButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toTopOf="@+id/officesButton"
         app:layout_constraintEnd_toStartOf="@+id/officesButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +25,11 @@
     <TextView
         android:id="@+id/campusResourceLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/campusResourcesDesc"
-        app:layout_constraintBottom_toTopOf="@+id/clubButton"
+        android:text="@string/campusResourcesButtonDesc"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/campusLifeButton"
         app:layout_constraintEnd_toEndOf="@+id/campusResourceButton"
         app:layout_constraintStart_toStartOf="@+id/campusResourceButton"
         app:layout_constraintTop_toBottomOf="@+id/campusResourceButton"
@@ -43,6 +45,7 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/financialButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toTopOf="@+id/officesButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +75,7 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/socialMediaButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toTopOf="@+id/officesButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
@@ -85,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/socialMediaButtonDesc"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/libraryButton"
         app:layout_constraintEnd_toEndOf="@+id/socialMediaButton"
         app:layout_constraintStart_toStartOf="@+id/socialMediaButton"
@@ -92,7 +97,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/clubButton"
+        android:id="@+id/campusLifeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -101,6 +106,7 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/campusLifeButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/officesButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,16 +114,17 @@
         app:srcCompat="@drawable/team_lift" />
 
     <TextView
-        android:id="@+id/clubsLabel"
+        android:id="@+id/campusLifeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:layout_marginBottom="8dp"
         android:text="@string/campusLifeButtonDesc"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/studentLifeButton"
-        app:layout_constraintEnd_toEndOf="@+id/clubButton"
-        app:layout_constraintStart_toStartOf="@+id/clubButton"
-        app:layout_constraintTop_toBottomOf="@+id/clubButton"
+        app:layout_constraintEnd_toEndOf="@+id/campusLifeButton"
+        app:layout_constraintStart_toStartOf="@+id/campusLifeButton"
+        app:layout_constraintTop_toBottomOf="@+id/campusLifeButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
@@ -143,6 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/officesButtonDesc"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/scheduleButton"
         app:layout_constraintEnd_toEndOf="@+id/officesButton"
         app:layout_constraintStart_toStartOf="@+id/officesButton"
@@ -159,6 +167,7 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/libraryButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
@@ -171,6 +180,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/libraryButtonDesc"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/transportationButton"
         app:layout_constraintEnd_toEndOf="@+id/libraryButton"
         app:layout_constraintStart_toStartOf="@+id/libraryButton"
@@ -186,7 +196,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/academicsButtonDesc"
+        android:contentDescription="@string/studentLifeButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/officesButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -198,10 +209,14 @@
         android:id="@+id/studentLifeLabel"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:text="@string/academicsButtonDesc"
+        android:layout_marginBottom="8dp"
+        android:text="@string/studentLifeButtonDesc"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/studentLifeButton"
         app:layout_constraintStart_toStartOf="@+id/studentLifeButton"
-        app:layout_constraintTop_toBottomOf="@+id/studentLifeButton" />
+        app:layout_constraintTop_toBottomOf="@+id/studentLifeButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/scheduleButton"
@@ -213,9 +228,9 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/scheduleButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/officesButton"
         app:layout_constraintVertical_bias="0.256"
@@ -223,12 +238,16 @@
 
     <TextView
         android:id="@+id/scheduleLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/scheduleButtonDesc"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/scheduleButton"
         app:layout_constraintStart_toStartOf="@+id/scheduleButton"
-        app:layout_constraintTop_toBottomOf="@+id/scheduleButton" />
+        app:layout_constraintTop_toBottomOf="@+id/scheduleButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/transportationButton"
@@ -240,21 +259,26 @@
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/transportationButtonDesc"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
         app:layout_constraintTop_toBottomOf="@+id/officesLabel"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintVertical_bias="0.13999999"
         app:srcCompat="@drawable/bus" />
 
     <TextView
         android:id="@+id/transportationLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/transportationButtonDesc"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/transportationButton"
         app:layout_constraintStart_toStartOf="@+id/transportationButton"
-        app:layout_constraintTop_toBottomOf="@+id/transportationButton" />
+        app:layout_constraintTop_toBottomOf="@+id/transportationButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/bannerImageView"
