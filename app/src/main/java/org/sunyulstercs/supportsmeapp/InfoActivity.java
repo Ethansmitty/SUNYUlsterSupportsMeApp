@@ -26,17 +26,17 @@ public class InfoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        Bundle extras = getIntent().getExtras();
+        Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
         if (extras != null) {
-            String[] array = extras.getStringArray("ListItems");
-            Collections.addAll(listItems, array);
+            String[] array = extras.getStringArray("ListItems"); //ListItems is a String array which will be displayed in RecyclerView
+            Collections.addAll(listItems, array); //Convert to ArrayList
 
-            String s = extras.getString("ActivityName");
+            String s = extras.getString("ActivityName"); //Setting toolbar title based on which category this is
             getSupportActionBar().setTitle(s);
         }
 
         //TODO: Make the buttons link to other pages
-        recyclerView = findViewById(R.id.infoListView);
+        recyclerView = findViewById(R.id.infoListView); //Set up recyclerview
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 

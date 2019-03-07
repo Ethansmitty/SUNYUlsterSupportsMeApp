@@ -12,13 +12,22 @@ import java.util.ArrayList;
 public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapter.InfoRecyclerViewHolder>
 {
 
+    //List of stuff to display
     private ArrayList<String> infoList;
 
+    /**
+     * Constructor for adapter
+     * @param infoList List of items to display
+     * @param context Application context
+     */
     InfoRecyclerAdapter(ArrayList<String> infoList, Context context)
     {
         this.infoList = infoList;
     }
 
+    /**
+     * @return InfoRecyclerAdapter
+     */
     @Override
     public InfoRecyclerAdapter.InfoRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
@@ -29,14 +38,20 @@ public class InfoRecyclerAdapter extends RecyclerView.Adapter<InfoRecyclerAdapte
     @Override
     public void onBindViewHolder(InfoRecyclerAdapter.InfoRecyclerViewHolder holder, int position)
     {
-        holder.text.setText(infoList.get(position));
+        holder.text.setText(infoList.get(position)); //Set text for this cell from list
     }
 
+    /**
+     * @return Number of items in list
+     */
     @Override
     public int getItemCount() {
         return infoList.size();
     }
 
+    /**
+     * Holds the layout for every RecyclerView cell
+     */
     class InfoRecyclerViewHolder extends RecyclerView.ViewHolder
     {
         TextView text;
