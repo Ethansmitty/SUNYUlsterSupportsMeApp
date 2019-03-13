@@ -1,5 +1,6 @@
 package org.sunyulstercs.supportsmeapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 /**
  * Placeholder class, uses an old version of InfoActivity as a way to display the details. Pending an actual design, this will be removed.
@@ -60,5 +62,10 @@ public class InfoDetailActivity extends AppCompatActivity
 
         RecyclerView.Adapter adapter = new InfoRecyclerAdapter(listItems, catData, getApplicationContext());
         recyclerView.setAdapter(adapter);
+    }
+
+    public void onItemClick(View v)
+    {
+        Log.d(this.getLocalClassName(),"Detail button clicked.");
     }
 }
