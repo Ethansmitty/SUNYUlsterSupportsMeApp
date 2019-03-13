@@ -31,26 +31,22 @@ public class InfoActivity extends AppCompatActivity
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
-        if (extras != null)
-        {
-            listItems = extras.getStringArray("ListItems"); //ListItems is a String array which will be displayed in RecyclerView
-            Object[] objectArray = (Object[]) extras.getSerializable("CategoryData");
-            if(objectArray!=null) {
-                catData = new String[objectArray.length][];
-                for (int i = 0; i < objectArray.length; i++) {
-                    catData[i] = (String[]) objectArray[i];
-                }
-            }
+        if (extras != null) {
+            //Getting multidimensional array from resource file
+            int catDataID = extras.getInt("CategoryData");
+            catData = ResourceHelper.resourceIDTo2DStringArray(catDataID, getApplicationContext());
+
+            listItems = ResourceHelper.getFirstElementsOf2DStringArray(catData); //ListItems is a String array which will be displayed in RecyclerView
 
             getSupportActionBar().setTitle(extras.getString("ActivityName")); //Setting toolbar title based on which category this is
+
+            recyclerView = findViewById(R.id.infoListView); //Set up recyclerview
+            layoutManager = new LinearLayoutManager(this);
+            recyclerView.setLayoutManager(layoutManager);
+
+            adapter = new InfoRecyclerAdapter(listItems, catData, getApplicationContext());
+            recyclerView.setAdapter(adapter);
         }
-
-        recyclerView = findViewById(R.id.infoListView); //Set up recyclerview
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        adapter = new InfoRecyclerAdapter(listItems, catData, getApplicationContext());
-        recyclerView.setAdapter(adapter);
     }
 
 
@@ -59,7 +55,7 @@ public class InfoActivity extends AppCompatActivity
         TextView tv = (TextView) v;
         String[] newList = (String[]) tv.getTag();
         if (newList != null) {
-            Intent intent = new Intent(this, InfoActivity.class);
+            Intent intent = new Intent(this, InfoDetailActivity.class);
             intent.putExtra("ListItems", newList);
             intent.putExtra("ActivityName", newList[0]);
             startActivity(intent);
