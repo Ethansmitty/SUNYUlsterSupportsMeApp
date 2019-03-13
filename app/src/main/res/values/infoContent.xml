@@ -86,6 +86,19 @@
         <item>@string/tutorLink</item>
     </string-array>
 
+    <array name="resourcesArrayArray">
+        <item>@array/srMapList</item>
+        <item>@array/kcMapList</item>
+        <item>@array/childcareList</item>
+        <item>@array/diningList</item>
+        <item>@array/bookstoreList</item>
+        <item>@array/counselingList</item>
+        <item>@array/freshStartList</item>
+        <item>@array/safeSpaceList</item>
+        <item>@array/foodPantryList</item>
+        <item>@array/tutorList</item>
+    </array>
+
     <string-array name="resourcesList">
         <item>@string/srMapTitle</item>
         <item>@string/kcMapTitle</item>
@@ -163,6 +176,16 @@
         <item>@string/costCalcLink</item>
     </string-array>
 
+    <array name="financialArrayArray">
+        <item>@array/givingList</item>
+        <item>@array/financialAidList</item>
+        <item>@array/scholarshipList</item>
+        <item>@array/studentAccountsList</item>
+        <item>@array/paymentPlanList</item>
+        <item>@array/eopList</item>
+        <item>@array/costCalcList</item>
+    </array>
+
     <string-array name="financialList">
         <item>@string/givingTitle</item>
         <item>@string/financialAidTitle</item>
@@ -220,11 +243,6 @@
         <item>@string/linkedinLink</item>
     </string-array>
 
-    <string name="snapchatTitle">Snapchat</string>
-    <string-array name="snapchatList">
-        <item>@string/snapchatTitle</item>
-    </string-array>
-
     <string name="youtubeTitle">YouTube</string>
     <string name="youtubeLink">https://www.youtube.com/user/SUNYUlster</string>
     <string-array name="youtubeList">
@@ -239,14 +257,24 @@
         <item>@string/blogLink</item>
     </string-array>
 
+    <array name="socialArrayArray">
+        <item>@array/artSiteList</item>
+        <item>@array/athleticsList</item>
+        <item>@array/facebookList</item>
+        <item>@array/instagramList</item>
+        <item>@array/twitterList</item>
+        <item>@array/linkedinList</item>
+        <item>@array/youtubeList</item>
+        <item>@array/blogList</item>
+    </array>
+
     <string-array name="socialList">
         <item>@string/artSiteTitle</item>
-        <item>@string/athleticsTitle</item> //TODO Add this to campus life
+        <item>@string/athleticsTitle</item>
         <item>@string/facebookTitle</item>
         <item>@string/instagramTitle</item>
         <item>@string/twitterTitle</item>
         <item>@string/linkedinTitle</item>
-        <item>@string/snapchatTitle</item>
         <item>@string/youtubeTitle</item>
         <item>@string/blogTitle</item>
     </string-array>
@@ -312,6 +340,17 @@
         <item>@string/weeklyCampusTitle</item>
         <item>@string/weeklyCampusDesc</item>
     </string-array>
+
+    <array name="campusLifeArrayArray">
+        <item>@array/clubsList</item>
+        <item>@array/studentGovList</item>
+        <item>@array/eventCalendarList</item>
+        <item>@array/athleticsList</item>
+        <item>@array/honorsList</item>
+        <item>@array/coilList</item>
+        <item>@array/diversityList</item>
+        <item>@array/weeklyCampusList</item>
+    </array>
 
     <string-array name="campusLifeList">
         <item>@string/clubsTitle</item>
@@ -400,6 +439,16 @@
         <item>@string/openLabsLink</item>
     </string-array>
 
+    <array name="officesArrayArray">
+        <item>@array/nurseList</item>
+        <item>@array/disabilityList</item>
+        <item>@array/trioList</item>
+        <item>@array/publicSafetyList</item>
+        <item>@array/careerList</item>
+        <item>@array/learningList</item>
+        <item>@array/openLabsList</item>
+    </array>
+
     <string-array name="officesList">
         <item>@string/nurseTitle</item>
         <item>@string/disabilityTitle</item>
@@ -459,6 +508,15 @@
         <item>@string/buildingHistoryTitle</item>
     </string-array>
 
+    <array name="libraryArrayArray">
+        <item>@array/loanedBooksList</item>
+        <item>@array/hoursList</item>
+        <item>@array/reserveRoomList</item>
+        <item>@array/librarianList</item>
+        <item>@array/interlibraryList</item>
+        <item>@array/buildingHistoryList</item>
+    </array>
+
     <string-array name="libraryList">
         <item>@string/loanedBooksTitle</item>
         <item>@string/hoursTitle</item>
@@ -510,6 +568,14 @@
         <item>@string/majorLink</item>
     </string-array>
 
+    <array name="studentLifeArrayArray">
+        <item>@array/advisorList</item>
+        <item>@array/calendarList</item>
+        <item>@array/handbookList</item>
+        <item>@array/campusNewsList</item>
+        <item>@array/majorList</item>
+    </array>
+
     <string-array name="studentLifeList">
         <item>@string/advisorTitle</item>
         <item>@string/calendarTitle</item>
@@ -559,6 +625,14 @@
         <item>@string/transcriptsLink</item>
     </string-array>
 
+    <array name="scheduleInfoArrayArray">
+        <item>@array/catalogList</item>
+        <item>@array/testingCalendarList</item>
+        <item>@array/scheduleList</item>
+        <item>@array/internshipsList</item>
+        <item>@array/transcriptsList</item>
+    </array>
+
     <string-array name="scheduleInfoList">
         <item>@string/catalogTitle</item>
         <item>@string/testingCalendarTitle</item>
@@ -595,6 +669,12 @@
         <item>@string/kcsuDirectionsDesc</item>
         <item>@string/kcsuDirectionsLink</item>
     </string-array>
+
+    <array name="transportArrayArray">
+        <item>@array/parkingMapList</item>
+        <item>@array/busScheduleList</item>
+        <item>@array/kcsuDirectionsList</item>
+    </array>
 
     <string-array name="transportList">
         <item>@string/parkingMapTitle</item>
