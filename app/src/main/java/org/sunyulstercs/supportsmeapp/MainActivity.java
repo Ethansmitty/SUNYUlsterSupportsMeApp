@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
 
@@ -16,11 +14,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen);
-    }
-
-    private String[][] make2DArray(String[]... arrays)
-    {
-        return arrays;
     }
 
     @Override

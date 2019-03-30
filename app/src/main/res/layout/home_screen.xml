@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/home_screen_background">
 
     <ImageButton
         android:id="@+id/campusResourceButton"
@@ -29,6 +31,8 @@
         android:layout_marginBottom="8dp"
         android:text="@string/campusResourcesButtonDesc"
         android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toTopOf="@+id/campusLifeButton"
         app:layout_constraintEnd_toEndOf="@+id/campusResourceButton"
         app:layout_constraintStart_toStartOf="@+id/campusResourceButton"
@@ -60,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/financialButtonDesc"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toTopOf="@+id/officesButton"
         app:layout_constraintEnd_toEndOf="@+id/financialButton"
         app:layout_constraintStart_toStartOf="@+id/financialButton"
@@ -91,6 +96,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/socialMediaButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toTopOf="@+id/libraryButton"
         app:layout_constraintEnd_toEndOf="@+id/socialMediaButton"
         app:layout_constraintStart_toStartOf="@+id/socialMediaButton"
@@ -122,6 +128,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/campusLifeButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toTopOf="@+id/studentLifeButton"
         app:layout_constraintEnd_toEndOf="@+id/campusLifeButton"
         app:layout_constraintStart_toStartOf="@+id/campusLifeButton"
@@ -152,6 +159,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/officesButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toTopOf="@+id/scheduleButton"
         app:layout_constraintEnd_toEndOf="@+id/officesButton"
         app:layout_constraintStart_toStartOf="@+id/officesButton"
@@ -182,6 +190,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/libraryButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toTopOf="@+id/transportationButton"
         app:layout_constraintEnd_toEndOf="@+id/libraryButton"
         app:layout_constraintStart_toStartOf="@+id/libraryButton"
@@ -213,6 +222,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/studentLifeButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/studentLifeButton"
         app:layout_constraintStart_toStartOf="@+id/studentLifeButton"
@@ -244,6 +254,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/scheduleButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/scheduleButton"
         app:layout_constraintStart_toStartOf="@+id/scheduleButton"
@@ -275,6 +286,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/transportationButtonDesc"
         android:textAlignment="center"
+        android:textColor="@color/colorHomeButtons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/transportationButton"
         app:layout_constraintStart_toStartOf="@+id/transportationButton"
@@ -283,7 +295,7 @@
 
     <ImageView
         android:id="@+id/bannerImageView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/homeScreenBannerDesc"
         app:layout_constraintBottom_toTopOf="@+id/financialButton"
@@ -301,6 +313,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scheduleLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/scheduleLabel"
+        tools:layout="@layout/fragment_nav" />
 
 </android.support.constraint.ConstraintLayout>
