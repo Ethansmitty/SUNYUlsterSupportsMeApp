@@ -2,11 +2,13 @@ package org.sunyulstercs.supportsmeapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Objects;
@@ -19,16 +21,22 @@ public class InfoActivity extends AppCompatActivity
     private RecyclerView.LayoutManager layoutManager;
     private String[] listItems;
     private String [][] catData;
+    private TextView categoryLabel;
+    private ImageView categoryImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+        categoryLabel = findViewById(R.id.categoryLabel);
+        categoryImage = findViewById(R.id.categoryImage);
 
+        /*
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        */
 
         Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
         if (extras != null) {
@@ -38,7 +46,10 @@ public class InfoActivity extends AppCompatActivity
 
             listItems = ResourceHelper.getFirstElementsOf2DStringArray(catData); //ListItems is a String array which will be displayed in RecyclerView
 
-            getSupportActionBar().setTitle(extras.getString("ActivityName")); //Setting toolbar title based on which category this is
+            //getSupportActionBar().setTitle(extras.getString("ActivityName")); //Setting toolbar title based on which category this is
+            categoryLabel.setText(extras.getString("ActivityName"));
+
+            categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
 
             recyclerView = findViewById(R.id.infoListView); //Set up recyclerview
             layoutManager = new LinearLayoutManager(this);

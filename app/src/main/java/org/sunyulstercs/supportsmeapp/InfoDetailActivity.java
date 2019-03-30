@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -18,13 +19,18 @@ public class InfoDetailActivity extends AppCompatActivity
 {
     private String[] listItems;
     private String [][] catData;
+    private TextView categoryLabel;
+    private ImageView categoryImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+        categoryLabel = findViewById(R.id.categoryLabel);
+        categoryImage = findViewById(R.id.categoryImage);
 
+        /*
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_arrow_back));
@@ -34,6 +40,7 @@ public class InfoDetailActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
+        */
 
         Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
         if (extras != null)
@@ -47,13 +54,17 @@ public class InfoDetailActivity extends AppCompatActivity
                 }
             }
 
+
             try
             {
-                getSupportActionBar().setTitle(extras.getString("ActivityName")); //Setting toolbar title based on which category this is
-            } catch (NullPointerException e)
+                //getSupportActionBar().setTitle(extras.getString("ActivityName")); //Setting toolbar title based on which category this is
+                categoryLabel.setText(extras.getString("ActivityName"));
+                categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
+            } catch (NullPointerException | android.content.res.Resources.NotFoundException e)
             {
-                Log.e(this.getLocalClassName(), "Null title");
+                Log.e(this.getLocalClassName(), "Null title/image");
             }
+
         }
 
         RecyclerView recyclerView = findViewById(R.id.infoListView);
