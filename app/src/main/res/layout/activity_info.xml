@@ -38,7 +38,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/infoListView"
-        android:layout_width="265dp"
+        android:layout_width="265sp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -47,14 +47,15 @@
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/navFragment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/categoryImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bannerImageView2">
 
     </android.support.v7.widget.RecyclerView>
 
     <ImageView
         android:id="@+id/categoryImage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -65,8 +66,7 @@
         android:cropToPadding="false"
         android:minWidth="80sp"
         app:layout_constraintBottom_toTopOf="@+id/navFragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/infoListView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bannerImageView2"
         app:layout_constraintVertical_bias="0.049" />
