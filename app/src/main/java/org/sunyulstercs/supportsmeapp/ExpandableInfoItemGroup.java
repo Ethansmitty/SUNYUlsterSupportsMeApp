@@ -5,21 +5,23 @@ import android.os.Bundle;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.List;
 
-public class InfoItemGroup extends ExpandableGroup<Bundle>
+public class ExpandableInfoItemGroup extends ExpandableGroup<InfoItem>
 {
-    private Bundle bundle;
+    private InfoItem infoItem;
     private String title;
 
-    public  InfoItemGroup(String title, List<Bundle> bundles)
+    public ExpandableInfoItemGroup(String title, List<InfoItem> items)
     {
-        super(title, bundles);
+        super(title, items);
     }
     @Override
-    public String getTitle() {
+    public String getTitle()
+    {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title)
+    {
         this.title = title;
     }
 
