@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/text_id"
+            android:id="@+id/info_title"
             android:layout_width="0dp"
             android:layout_height="40sp"
             android:layout_marginStart="40dp"
@@ -34,7 +34,7 @@
             android:background="@drawable/menu_item_background"
             android:contentDescription="@string/iconText"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/text_id"
+            app:layout_constraintEnd_toStartOf="@+id/info_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>

@@ -10,4 +10,5 @@
     <color name="colorHomeButtons">#ffd783</color>
     <color name="colorMenuRows">#FFF1D7</color>
     <color name="colorBackground">#424242</color>
+    <color name="colorTextMenuClicked">#58330a</color>
 </resources>
