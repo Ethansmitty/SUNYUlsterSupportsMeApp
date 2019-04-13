@@ -11,36 +11,6 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/info_title"
-            android:layout_width="0dp"
-            android:layout_height="40sp"
-            android:layout_marginStart="40dp"
-            android:background="@drawable/menu_item_background_selected"
-            android:gravity="center_vertical|start"
-            android:onClick="onItemClick"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
-            android:textColor="@color/colorTextMenuClicked"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="@string/placeholderText" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/menu_item_background_selected"
-            android:contentDescription="@string/iconText"
-            app:layout_constraintBottom_toBottomOf="@+id/info_title"
-            app:layout_constraintEnd_toStartOf="@+id/info_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/info_title" />
-
-        <TextView
             android:id="@+id/info_desc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -51,7 +21,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/info_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="@string/placeholderText" />
 
 

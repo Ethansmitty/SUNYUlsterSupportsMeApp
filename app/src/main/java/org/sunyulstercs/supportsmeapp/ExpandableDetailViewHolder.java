@@ -5,21 +5,21 @@ import android.widget.TextView;
 
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
-public class ExpandableDetailViewHolder extends ChildViewHolder
+class ExpandableDetailViewHolder extends ChildViewHolder
 {
-    private TextView infoTitle;
+    //private TextView infoTitle;
     private TextView infoDesc;
 
-    public ExpandableDetailViewHolder(View view)
+    ExpandableDetailViewHolder(View view)
     {
         super(view);
-        infoTitle = view.findViewById(R.id.info_title);
+        //infoTitle = view.findViewById(R.id.info_title);
         infoDesc = view.findViewById(R.id.info_desc);
     }
 
-    public void OnBind(InfoItem info)
+    void OnBind(InfoItem info)
     {
-        infoTitle.setText(info.getTitle());
+        //infoTitle.setText(info.getTitle());
         infoDesc.setText(info.getDesc());
 
     }

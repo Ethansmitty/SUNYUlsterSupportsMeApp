@@ -1,21 +1,67 @@
 package org.sunyulstercs.supportsmeapp;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Objects;
+import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class InfoActivity extends AppCompatActivity
 {
 
+    private Bundle extras;
+    private boolean isExpanded = false;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_info);
+        TextView categoryLabel = findViewById(R.id.categoryLabel);
+        ImageView categoryImage = findViewById(R.id.categoryImage);
+
+        RecyclerView recyclerView = findViewById(R.id.info_list_view);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        ExpandableInfoAdapter adapter = new ExpandableInfoAdapter(getItems());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+        categoryLabel.setText(extras.getString("ActivityName"));
+        categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
+    }
+
+    private List<ExpandableGroup> getItems()
+    {
+        List<ExpandableGroup> egList = new ArrayList<>();
+        extras = getIntent().getExtras();
+
+        if (extras != null)
+        {
+            //Getting multidimensional array from resource file
+            int catDataID = extras.getInt("CategoryData");
+            String[][] catData = ResourceHelper.resourceIDTo2DStringArray(catDataID, getApplicationContext());
+
+            for (String[] array : catData)
+            {
+                List<InfoItem> infoItemList = new ArrayList<>();
+                infoItemList.add(new InfoItem(array));
+                egList.add(new ExpandableGroup<>(infoItemList.get(0).getTitle(), infoItemList));
+            }
+        }
+        return egList;
+    }
+
+/*
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -37,7 +83,7 @@ public class InfoActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         */
-
+/*
         Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
         if (extras != null) {
             //Getting multidimensional array from resource file
@@ -72,4 +118,5 @@ public class InfoActivity extends AppCompatActivity
             startActivity(intent);
         }
     }
+ */
 }

@@ -3,6 +3,8 @@ package org.sunyulstercs.supportsmeapp;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
+
 public class InfoItem implements Parcelable
 {
     private String title;
@@ -10,24 +12,34 @@ public class InfoItem implements Parcelable
     private String link;
     private String phoneNumber;
 
-    public InfoItem(String[] items)
+    InfoItem(String[] items)
     {
         this.title = items[0];
 
-        this.desc = items[1];
-
-        if ((items.length >= 3) && !items[2].isEmpty())
+        if (items.length >= 2)
         {
-            this.link = items[2];
+            if (!items[1].isEmpty())
+            {
+                this.desc = items[1];
+
+
+                if (items.length >= 3) {
+                    if (!items[2].isEmpty()) {
+                        this.link = items[2];
+                    }
+
+                    if (items.length >= 4) {
+                        if (!items[3].isEmpty()) {
+                            this.phoneNumber = items[3];
+                        }
+                    }
+                }
+            }
         }
 
-        if ((items.length >= 4) && !items[3].isEmpty())
-        {
-            this.phoneNumber = items[3];
-        }
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
@@ -35,7 +47,7 @@ public class InfoItem implements Parcelable
         this.title = title;
     }
 
-    public String getDesc() {
+    String getDesc() {
         return desc;
     }
 
@@ -57,6 +69,16 @@ public class InfoItem implements Parcelable
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public boolean hasLink()
+    {
+        return this.link != null;
+    }
+
+    public boolean hasPhoneNumber()
+    {
+        return this.phoneNumber != null;
     }
 
     @Override

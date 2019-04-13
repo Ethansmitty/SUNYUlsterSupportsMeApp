@@ -38,7 +38,7 @@
         tools:layout="@layout/fragment_nav" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/infoListView"
+        android:id="@+id/info_list_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="150dp"
@@ -67,7 +67,7 @@
         android:cropToPadding="false"
         android:minWidth="80sp"
         app:layout_constraintBottom_toTopOf="@+id/navFragment"
-        app:layout_constraintEnd_toStartOf="@+id/infoListView"
+        app:layout_constraintEnd_toStartOf="@+id/info_list_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bannerImageView2"
         app:layout_constraintVertical_bias="0.049" />
