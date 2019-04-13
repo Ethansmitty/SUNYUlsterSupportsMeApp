@@ -3,7 +3,6 @@ package org.sunyulstercs.supportsmeapp;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 
 public class InfoItem implements Parcelable
 {
@@ -55,7 +54,7 @@ public class InfoItem implements Parcelable
         this.desc = desc;
     }
 
-    public String getLink() {
+    String getLink() {
         return link;
     }
 
@@ -71,12 +70,24 @@ public class InfoItem implements Parcelable
         this.phoneNumber = phoneNumber;
     }
 
-    public boolean hasLink()
+    String getFormattedPhoneNumber()
+    {
+        StringBuilder sb = new StringBuilder();
+        if (this.hasPhoneNumber())
+        {
+            sb.append("tel:");
+            sb.append(this.phoneNumber);
+            sb.deleteCharAt(sb.indexOf("–"));
+        }
+        return sb.toString();
+    }
+
+    boolean hasLink()
     {
         return this.link != null;
     }
 
-    public boolean hasPhoneNumber()
+    boolean hasPhoneNumber()
     {
         return this.phoneNumber != null;
     }
@@ -112,4 +123,9 @@ public class InfoItem implements Parcelable
             return new InfoItem[size];
         }
     };
+
+    boolean hasDesc()
+    {
+        return this.desc != null;
+    }
 }

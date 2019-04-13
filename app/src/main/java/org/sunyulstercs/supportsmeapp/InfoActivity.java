@@ -6,7 +6,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,7 +18,8 @@ public class InfoActivity extends AppCompatActivity
 {
 
     private Bundle extras;
-    private boolean isExpanded = false;
+    RecyclerView recyclerView;
+    InfoItemDividerItemDecoration deco;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,12 +29,16 @@ public class InfoActivity extends AppCompatActivity
         TextView categoryLabel = findViewById(R.id.categoryLabel);
         ImageView categoryImage = findViewById(R.id.categoryImage);
 
-        RecyclerView recyclerView = findViewById(R.id.info_list_view);
+        deco = new InfoItemDividerItemDecoration(getDrawable(R.drawable.menu_item_background));
+
+
+        recyclerView = findViewById(R.id.info_list_view);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         ExpandableInfoAdapter adapter = new ExpandableInfoAdapter(getItems());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(deco);
 
         categoryLabel.setText(extras.getString("ActivityName"));
         categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
@@ -61,7 +65,7 @@ public class InfoActivity extends AppCompatActivity
         return egList;
     }
 
-/*
+    /*
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
