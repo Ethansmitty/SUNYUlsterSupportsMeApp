@@ -27,7 +27,7 @@ public class InfoActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_info);
         TextView categoryLabel = findViewById(R.id.categoryLabel);
-        ImageView categoryImage = findViewById(R.id.categoryImage);
+        ImageView categoryImage = findViewById(R.id.category_image);
 
         deco = new InfoItemDividerItemDecoration(getDrawable(R.drawable.menu_item_background));
 

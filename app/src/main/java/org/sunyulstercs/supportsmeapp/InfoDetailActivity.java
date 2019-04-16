@@ -26,7 +26,7 @@ public class InfoDetailActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         categoryLabel = findViewById(R.id.categoryLabel);
-        categoryImage = findViewById(R.id.categoryImage);
+        categoryImage = findViewById(R.id.category_image);
 
         /*
         Toolbar toolbar = findViewById(R.id.toolbar);

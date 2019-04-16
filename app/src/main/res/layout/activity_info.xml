@@ -9,7 +9,7 @@
     tools:context=".InfoActivity">
 
     <ImageView
-        android:id="@+id/bannerImageView2"
+        android:id="@+id/banner_image_view"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/home_banner" />
 
     <fragment
-        android:id="@+id/navFragment"
+        android:id="@+id/nav_fragment"
         android:name="org.sunyulstercs.supportsmeapp.navFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -47,17 +47,17 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/menu_item_background"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/navFragment"
+        app:layout_constraintBottom_toTopOf="@+id/nav_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bannerImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/banner_image_view"
         app:layout_constraintVertical_bias="0.0">
 
     </android.support.v7.widget.RecyclerView>
 
     <ImageView
-        android:id="@+id/categoryImage"
+        android:id="@+id/category_image"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,10 +68,10 @@
         android:contentDescription="@string/placeholderText"
         android:cropToPadding="false"
         android:minWidth="80sp"
-        app:layout_constraintBottom_toTopOf="@+id/navFragment"
+        app:layout_constraintBottom_toTopOf="@+id/nav_fragment"
         app:layout_constraintEnd_toStartOf="@+id/info_list_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bannerImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/banner_image_view"
         app:layout_constraintVertical_bias="0.049" />
 
     <TextView
@@ -83,10 +83,10 @@
         android:text="@string/placeholderText"
         android:textAlignment="center"
         android:textColor="@color/colorHomeButtons"
-        app:layout_constraintBottom_toTopOf="@+id/navFragment"
-        app:layout_constraintEnd_toEndOf="@+id/categoryImage"
-        app:layout_constraintStart_toStartOf="@+id/categoryImage"
-        app:layout_constraintTop_toBottomOf="@+id/categoryImage"
+        app:layout_constraintBottom_toTopOf="@+id/nav_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/category_image"
+        app:layout_constraintStart_toStartOf="@+id/category_image"
+        app:layout_constraintTop_toBottomOf="@+id/category_image"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

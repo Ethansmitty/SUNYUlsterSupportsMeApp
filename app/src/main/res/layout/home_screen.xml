@@ -294,7 +294,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/bannerImageView"
+        android:id="@+id/banner_image_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="@string/homeScreenBannerDesc"
