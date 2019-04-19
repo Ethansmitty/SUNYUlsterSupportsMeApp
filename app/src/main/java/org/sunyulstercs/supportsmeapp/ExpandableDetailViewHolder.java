@@ -66,6 +66,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
         if (info.hasLink())
         {
             websiteButton.setTag(info.getLink());
+            websiteButton.setVisibility(View.VISIBLE);
         } else {
             websiteButton.setVisibility(View.INVISIBLE);
         }
@@ -73,6 +74,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
         if (info.hasPhoneNumber())
         {
             phoneButton.setTag(info.getFormattedPhoneNumber());
+            phoneButton.setVisibility(View.VISIBLE);
         } else {
             phoneButton.setVisibility(View.INVISIBLE);
         }
