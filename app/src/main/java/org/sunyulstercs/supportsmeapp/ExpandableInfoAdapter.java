@@ -1,5 +1,6 @@
 package org.sunyulstercs.supportsmeapp;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,4 @@ public class ExpandableInfoAdapter extends ExpandableRecyclerViewAdapter<Expanda
     public void onBindGroupViewHolder(ExpandableInfoViewHolder holder, int flatPosition, ExpandableGroup group) {
         holder.setInfoTitle(group.getTitle());
     }
-
-
 }

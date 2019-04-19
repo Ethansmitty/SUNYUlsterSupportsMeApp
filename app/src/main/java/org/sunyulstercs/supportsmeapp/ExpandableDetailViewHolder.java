@@ -16,6 +16,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
     private Button websiteButton;
     private Button phoneButton;
     private TextView infoDesc;
+    private InfoItem info;
 
     ExpandableDetailViewHolder(View view)
     {
@@ -27,8 +28,10 @@ class ExpandableDetailViewHolder extends ChildViewHolder
 
         moreInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //TODO: This should open Level 3 activity...
-                Toast.makeText(v.getContext(), "TODO: This should open Level 3 activity...", Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                intent.putExtra("InfoItem", info);
+                v.getContext().startActivity(intent);
             }
         });
 
@@ -53,6 +56,8 @@ class ExpandableDetailViewHolder extends ChildViewHolder
 
     void OnBind(InfoItem info)
     {
+        this.info = info;
+
         if (info.hasDesc())
         {
             infoDesc.setText(info.getDesc());

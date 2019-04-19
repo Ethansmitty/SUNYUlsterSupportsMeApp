@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
 
 public class ExpandableInfoViewHolder extends GroupViewHolder
@@ -39,4 +40,5 @@ public class ExpandableInfoViewHolder extends GroupViewHolder
         infoTitle.setBackground(background);
         infoImage.setBackground(background);
     }
+
 }

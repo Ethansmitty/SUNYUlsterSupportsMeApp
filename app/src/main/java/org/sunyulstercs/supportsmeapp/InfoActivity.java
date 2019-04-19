@@ -19,7 +19,6 @@ public class InfoActivity extends AppCompatActivity
 
     private Bundle extras;
     RecyclerView recyclerView;
-    InfoItemDividerItemDecoration deco;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,10 +26,7 @@ public class InfoActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_info);
         TextView categoryLabel = findViewById(R.id.categoryLabel);
-        ImageView categoryImage = findViewById(R.id.category_image);
-
-        deco = new InfoItemDividerItemDecoration(getDrawable(R.drawable.menu_item_background));
-
+        ImageView categoryImage = findViewById(R.id.department_icon);
 
         recyclerView = findViewById(R.id.info_list_view);
 
@@ -38,7 +34,6 @@ public class InfoActivity extends AppCompatActivity
         ExpandableInfoAdapter adapter = new ExpandableInfoAdapter(getItems());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-        recyclerView.addItemDecoration(deco);
 
         categoryLabel.setText(extras.getString("ActivityName"));
         categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
