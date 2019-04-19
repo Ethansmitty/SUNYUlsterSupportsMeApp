@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/building" />
+        app:srcCompat="@drawable/home_building" />
 
     <TextView
         android:id="@+id/campusResourceLabel"
@@ -56,7 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/dollar_sign" />
+        app:srcCompat="@drawable/home_dollar_sign" />
 
     <TextView
         android:id="@+id/financialLabel"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toEndOf="@+id/officesButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/u" />
+        app:srcCompat="@drawable/home_u" />
 
     <TextView
         android:id="@+id/socialMediaLabel"
@@ -118,7 +118,7 @@
         app:layout_constraintEnd_toStartOf="@+id/officesButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/team_lift" />
+        app:srcCompat="@drawable/home_team_lift" />
 
     <TextView
         android:id="@+id/campusLifeLabel"
@@ -150,7 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/info" />
+        app:srcCompat="@drawable/home_info" />
 
     <TextView
         android:id="@+id/officesLabel"
@@ -181,7 +181,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/book" />
+        app:srcCompat="@drawable/home_book" />
 
     <TextView
         android:id="@+id/libraryLabel"
@@ -213,7 +213,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/officesButton"
         app:layout_constraintVertical_bias="0.256"
-        app:srcCompat="@drawable/grad_hat" />
+        app:srcCompat="@drawable/home_grad_hat" />
 
     <TextView
         android:id="@+id/studentLifeLabel"
@@ -245,7 +245,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/officesButton"
         app:layout_constraintVertical_bias="0.256"
-        app:srcCompat="@drawable/calendar" />
+        app:srcCompat="@drawable/home_calendar" />
 
     <TextView
         android:id="@+id/scheduleLabel"
@@ -277,7 +277,7 @@
         app:layout_constraintStart_toEndOf="@+id/officesButton"
         app:layout_constraintTop_toBottomOf="@+id/officesLabel"
         app:layout_constraintVertical_bias="0.13999999"
-        app:srcCompat="@drawable/bus" />
+        app:srcCompat="@drawable/home_bus" />
 
     <TextView
         android:id="@+id/transportationLabel"

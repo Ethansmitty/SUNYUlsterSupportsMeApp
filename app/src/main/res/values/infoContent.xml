@@ -528,7 +528,7 @@
         <item>@array/majorList</item>
     </array>
 
-    <!-- Schedule/Class info-->
+    <!-- Schedule/Class home_info-->
     <string name="catalogTitle">College Catalog</string>
     <string name="catalogDesc">See the upcoming classes that you can take at SUNY Ulster.</string>
     <string name="catalogLink">http://catalog.sunyulster.edu/</string>
