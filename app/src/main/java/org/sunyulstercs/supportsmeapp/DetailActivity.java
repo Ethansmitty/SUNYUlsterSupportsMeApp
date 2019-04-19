@@ -56,26 +56,35 @@ public class DetailActivity extends AppCompatActivity
         departmentLabelText.setText(info.getTitle());
         departmentDescText.setText(info.getDesc());
 
-        departmentPhoneText.setText(info.getPhoneNumber());
-        departmentPhoneText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(info.getFormattedPhoneNumber()));
-                v.getContext().startActivity(intent);
-            }
-        });
+        if (info.hasPhoneNumber())
+        {
+            departmentPhoneText.setText(info.getPhoneNumber());
+            departmentPhoneText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse(info.getFormattedPhoneNumber()));
+                    v.getContext().startActivity(intent);
+                }
+            });
+        }
 
-        //TODO: Implement email addresses
-        /*departmentEmailText.setText(info.getEmail());
-        departmentEmailText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(info.getEmail()));
-                v.getContext().startActivity(intent);
-            }
-        });*/
+
+        if (info.hasEmail())
+        {
+            departmentEmailText.setText(info.getEmail());
+            departmentEmailText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                    String uriText = "mailto:" + Uri.encode(info.getEmail());
+                    Uri uri = Uri.parse(uriText);
+
+                    intent.setData(uri);
+                    startActivity(Intent.createChooser(intent, "Send mail..."));
+                }
+            });
+        }
 
     }
 

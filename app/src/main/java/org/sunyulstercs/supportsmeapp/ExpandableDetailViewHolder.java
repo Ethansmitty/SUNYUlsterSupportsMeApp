@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
@@ -38,7 +37,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
         websiteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse((String) v.getTag()); // missing 'http://' will cause crash
+                Uri uri = Uri.parse(info.getLink()); // missing 'http://' will cause crash
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 v.getContext().startActivity(intent);
             }
@@ -48,7 +47,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse((String) phoneButton.getTag()));
+                intent.setData(Uri.parse(info.getFormattedPhoneNumber()));
                 v.getContext().startActivity(intent);
             }
         });
@@ -65,7 +64,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
 
         if (info.hasLink())
         {
-            websiteButton.setTag(info.getLink());
+            //websiteButton.setTag(info.getLink());
             websiteButton.setVisibility(View.VISIBLE);
         } else {
             websiteButton.setVisibility(View.INVISIBLE);
@@ -73,7 +72,7 @@ class ExpandableDetailViewHolder extends ChildViewHolder
 
         if (info.hasPhoneNumber())
         {
-            phoneButton.setTag(info.getFormattedPhoneNumber());
+            //phoneButton.setTag(info.getFormattedPhoneNumber());
             phoneButton.setVisibility(View.VISIBLE);
         } else {
             phoneButton.setVisibility(View.INVISIBLE);

@@ -10,6 +10,7 @@ public class InfoItem implements Parcelable
     private String desc;
     private String link;
     private String phoneNumber;
+    private String email;
 
     InfoItem(String[] items)
     {
@@ -21,17 +22,24 @@ public class InfoItem implements Parcelable
             {
                 this.desc = items[1];
 
-
                 if (items.length >= 3) {
                     if (!items[2].isEmpty()) {
                         this.link = items[2];
-                    }
 
-                    if (items.length >= 4) {
-                        if (!items[3].isEmpty()) {
-                            this.phoneNumber = items[3];
+                        if (items.length >= 4) {
+                            if (!items[3].isEmpty()) {
+                                this.phoneNumber = items[3];
+
+                                if (items.length >= 5) {
+                                    if (!items[4].isEmpty()) {
+                                        this.email = items[4];
+                                    }
+                                }
+                            }
                         }
                     }
+
+
                 }
             }
         }
@@ -62,12 +70,20 @@ public class InfoItem implements Parcelable
         this.link = link;
     }
 
-    public String getPhoneNumber() {
+    String getPhoneNumber() {
         return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     String getFormattedPhoneNumber()
@@ -92,6 +108,11 @@ public class InfoItem implements Parcelable
         return this.phoneNumber != null;
     }
 
+    boolean hasEmail()
+    {
+        return this.email != null;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -103,6 +124,7 @@ public class InfoItem implements Parcelable
         dest.writeString(this.desc);
         dest.writeString(this.link);
         dest.writeString(this.phoneNumber);
+        dest.writeString(this.email);
     }
 
     private InfoItem(Parcel in) {
@@ -110,6 +132,7 @@ public class InfoItem implements Parcelable
         this.desc = in.readString();
         this.link = in.readString();
         this.phoneNumber = in.readString();
+        this.email = in.readString();
     }
 
     public static final Parcelable.Creator<InfoItem> CREATOR = new Parcelable.Creator<InfoItem>() {
@@ -128,4 +151,5 @@ public class InfoItem implements Parcelable
     {
         return this.desc != null;
     }
+
 }
