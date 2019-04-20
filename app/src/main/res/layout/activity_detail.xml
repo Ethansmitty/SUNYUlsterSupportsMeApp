@@ -22,7 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/home_banner" />
+        app:srcCompat="@drawable/home_banner"
+        tools:ignore="UnusedAttribute" />
 
     <ImageView
         android:id="@+id/department_icon"
@@ -103,7 +104,7 @@
         android:id="@+id/department_desc_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
+        android:layout_marginStart="162dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/placeholderText"

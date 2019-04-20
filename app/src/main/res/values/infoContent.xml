@@ -39,7 +39,7 @@
 
     <string name="bookstoreTitle">Senator Bookstore</string>
     <string name="bookstoreDesc">The place to find all the supplies needed for any SUNY Ulster degree; including textbooks, pens, notebooks, college merchandise, and more with staff ready to help you at every turn.\nVanderlyn Hall, 149B</string>
-    <string name="bookstoreLink">www.sunyulstershop.com</string>
+    <string name="bookstoreLink">http://www.sunyulstershop.com</string>
     <string name="bookstorePhone">845–687–5085</string>
     <string name="bookstoreEmail">sunyulster@bkstr.com</string>
     <string-array name="bookstoreList">
