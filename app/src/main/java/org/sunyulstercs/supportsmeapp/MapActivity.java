@@ -103,7 +103,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
             displayLocationSettingsRequest(this);
-            Toast.makeText(this, "User nav_location enabled", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "User location enabled", Toast.LENGTH_SHORT).show();
         } else {
             //Prompt user for permission
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSION_FINE_LOCATION);
