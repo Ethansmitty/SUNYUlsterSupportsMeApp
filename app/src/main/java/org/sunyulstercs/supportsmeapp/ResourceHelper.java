@@ -30,13 +30,4 @@ public class ResourceHelper {
         return newArray;
     }
 
-    public static String[] getFirstElementsOf2DStringArray(String[][] array)
-    {
-        String[] newArray = new String[array.length];
-        for (int x = 0; x < array.length; x++)
-        {
-            newArray[x] = array[x][0];
-        }
-        return newArray;
-    }
 }
