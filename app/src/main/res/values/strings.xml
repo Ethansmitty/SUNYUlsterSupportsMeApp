@@ -37,4 +37,7 @@
     <string name="app_name">SUNY Ulster</string>
     <string name="placeholderText">Placeholder Text</string>
     <string name="iconText">Icon</string>
+    <string name="moreInfoButtonText">Info</string>
+    <string name="infoLinkButtonText">Website</string>
+    <string name="infoPhoneButtonText">Call</string>
 </resources>

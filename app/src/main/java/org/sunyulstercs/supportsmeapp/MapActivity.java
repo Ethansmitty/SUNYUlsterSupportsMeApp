@@ -156,21 +156,19 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case MY_PERMISSION_FINE_LOCATION:
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //Redundant permission check
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        mMap.setMyLocationEnabled(true);
-                        displayLocationSettingsRequest(this);
-                        Toast.makeText(this, "User location enabled", Toast.LENGTH_LONG).show();
-                        //TODO Make this work on first run
-                    }
-                } else {
-                    //If no permission, just don't use the marker
-                    Toast.makeText(this, "User location disabled", Toast.LENGTH_LONG).show();
+        if (requestCode == MY_PERMISSION_FINE_LOCATION) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //Redundant permission check
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    mMap.setMyLocationEnabled(true);
+                    displayLocationSettingsRequest(this);
+                    Toast.makeText(this, "User nav_location enabled", Toast.LENGTH_LONG).show();
+                    //TODO Make this work on first run
                 }
-                break;
+            } else {
+                //If no permission, just don't use the marker
+                Toast.makeText(this, "User nav_location disabled", Toast.LENGTH_LONG).show();
+            }
         }
     }
 

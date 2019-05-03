@@ -2,6 +2,7 @@ package org.sunyulstercs.supportsmeapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,8 +30,7 @@ public class navFragment extends Fragment implements View.OnClickListener {
      * @return A new instance of fragment navFragment.
      */
     public static navFragment newInstance() {
-        navFragment fragment = new navFragment();
-        return fragment;
+        return new navFragment();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class navFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_nav, container, false);
@@ -62,10 +62,10 @@ public class navFragment extends Fragment implements View.OnClickListener {
         switch (view.getId())
         {
             case R.id.homeButton :
-                if (!(getActivity() instanceof MainActivity))  //If we're already home, do nothing
+                if (!(getActivity() instanceof MainActivity))  //If we're already nav_home, do nothing
                 {
                     Intent homeIntent = new Intent(this.getContext(), MainActivity.class);
-                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Clears stack when going home
+                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Clears stack when going nav_home
                     startActivity(homeIntent);
                 }
 

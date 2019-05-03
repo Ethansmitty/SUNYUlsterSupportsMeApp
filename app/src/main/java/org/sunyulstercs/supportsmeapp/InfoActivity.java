@@ -1,75 +1,62 @@
 package org.sunyulstercs.supportsmeapp;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Objects;
+import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class InfoActivity extends AppCompatActivity
 {
 
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private String[] listItems;
-    private String [][] catData;
-    private TextView categoryLabel;
-    private ImageView categoryImage;
+    private Bundle extras;
+    RecyclerView recyclerView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_info);
-        categoryLabel = findViewById(R.id.categoryLabel);
-        categoryImage = findViewById(R.id.categoryImage);
+        TextView categoryLabel = findViewById(R.id.categoryLabel);
+        ImageView categoryImage = findViewById(R.id.department_icon);
 
-        /*
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        */
+        recyclerView = findViewById(R.id.info_list_view);
 
-        Bundle extras = getIntent().getExtras(); //Get data passed to activity with Intent
-        if (extras != null) {
-            //Getting multidimensional array from resource file
-            int catDataID = extras.getInt("CategoryData");
-            catData = ResourceHelper.resourceIDTo2DStringArray(catDataID, getApplicationContext());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        ExpandableInfoAdapter adapter = new ExpandableInfoAdapter(getItems());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
 
-            listItems = ResourceHelper.getFirstElementsOf2DStringArray(catData); //ListItems is a String array which will be displayed in RecyclerView
-
-            //getSupportActionBar().setTitle(extras.getString("ActivityName")); //Setting toolbar title based on which category this is
-            categoryLabel.setText(extras.getString("ActivityName"));
-
-            categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
-
-            recyclerView = findViewById(R.id.infoListView); //Set up recyclerview
-            layoutManager = new LinearLayoutManager(this);
-            recyclerView.setLayoutManager(layoutManager);
-
-            adapter = new InfoRecyclerAdapter(listItems, catData, getApplicationContext());
-            recyclerView.setAdapter(adapter);
-        }
+        categoryLabel.setText(extras.getString("ActivityName"));
+        categoryImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),extras.getInt("CategoryImage"))); //set image button
     }
 
-
-    public void onItemClick(View v)
+    private List<ExpandableGroup> getItems()
     {
-        TextView tv = (TextView) v;
-        String[] newList = (String[]) tv.getTag();
-        if (newList != null) {
-            Intent intent = new Intent(this, InfoDetailActivity.class);
-            intent.putExtra("ListItems", newList);
-            intent.putExtra("ActivityName", newList[0]);
-            startActivity(intent);
+        List<ExpandableGroup> egList = new ArrayList<>();
+        extras = getIntent().getExtras();
+
+        if (extras != null)
+        {
+            //Getting multidimensional array from resource file
+            int catDataID = extras.getInt("CategoryData");
+            String[][] catData = ResourceHelper.resourceIDTo2DStringArray(catDataID, getApplicationContext());
+
+            for (String[] array : catData)
+            {
+                List<InfoItem> infoItemList = new ArrayList<>();
+                infoItemList.add(new InfoItem(array));
+                egList.add(new ExpandableGroup<>(infoItemList.get(0).getTitle(), infoItemList));
+            }
         }
+        return egList;
     }
 }

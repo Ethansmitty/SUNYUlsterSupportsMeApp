@@ -16,17 +16,21 @@
     </string-array>
 
     <string name="childcareTitle">Childcare</string>
-    <string name="childcareDesc">Students with young ones can use this feature to find a childcare program that offers you the right philosophies, policies, and hours that fit your family needs in the Children’s Center.</string>
+    <string name="childcareDesc">The Children’s Center provides high quality and affordable childcare for children of students, faculty and staff, and the local community.</string>
     <string name="childcareLink">https://www.sunyulster.edu/campus_and_culture/campus_resources/childcare</string>
+    <string name="childcarePhone">845–687–5257</string>
+    <string name="childcareEmail">childrenscenter@sunyulster.edu</string>
     <string-array name="childcareList">
         <item>@string/childcareTitle</item>
         <item>@string/childcareDesc</item>
         <item>@string/childcareLink</item>
+        <item>@string/childcarePhone</item>
+        <item>@string/childcareEmail</item>
     </string-array>
 
     <string name="diningTitle">Dining Options</string>
-    <string name="diningDesc">Discover the grub hubs on campus, fully serviced by Lessing’s. Find out their hours of operation, locations, available options and specials.</string>
-    <string name="diningLink">https://www.sunyulster.edu/student_handbook/food_service.php</string>
+    <string name="diningDesc">Discover the grub hubs on campus, fully serviced by Lessing’s.</string>
+    <string name="diningLink">https://www.sunyulster.edu/campus_and_culture/campus_resources/dining.php</string>
     <string-array name="diningList">
         <item>@string/diningTitle</item>
         <item>@string/diningDesc</item>
@@ -34,12 +38,16 @@
     </string-array>
 
     <string name="bookstoreTitle">Senator Bookstore</string>
-    <string name="bookstoreDesc">The place to find all the supplies needed for any SUNY Ulster degree; including textbooks, pens, notebooks, college merchandise, and more with staff ready to help you at every turn.</string>
-    <string name="bookstoreLink">https://www.bkstr.com/sunyulstercountystore/home</string>
+    <string name="bookstoreDesc">The place to find all the supplies needed for any SUNY Ulster degree; including textbooks, pens, notebooks, college merchandise, and more with staff ready to help you at every turn.\nVanderlyn Hall, 149B</string>
+    <string name="bookstoreLink">http://www.sunyulstershop.com</string>
+    <string name="bookstorePhone">845–687–5085</string>
+    <string name="bookstoreEmail">sunyulster@bkstr.com</string>
     <string-array name="bookstoreList">
         <item>@string/bookstoreTitle</item>
         <item>@string/bookstoreDesc</item>
         <item>@string/bookstoreLink</item>
+        <item>@string/bookstorePhone</item>
+        <item>@string/bookstoreEmail</item>
     </string-array>
 
 
@@ -86,18 +94,49 @@
         <item>@string/tutorLink</item>
     </string-array>
 
+    <string name="nurseTitle">"Health Services"</string>
+    <string name="nurseDesc">"First aid treatment, medical emergency care, blood pressure checks, health information, treatment referrals, onsite clinics and more.\nSEN 103"</string>
+    <string name="nurseLink">"https://www.sunyulster.edu/campus_and_culture/campus_resources/health_services"</string>
+    <string name="nursePhone">"845–687–5246"</string>
+    <string-array name="nurseList">
+        <item>@string/nurseTitle</item>
+        <item>@string/nurseDesc</item>
+        <item>@string/nurseLink</item>
+        <item>@string/nursePhone</item>
+    </string-array>
+
+    <string name="portalTitle">Portal</string>
+    <string name="portalDesc">My.SUNYUlster is our Student Information Portal and the school\'s primary means of communicating official College information. The portal is available from anywhere you have Internet access by using your student login.</string>
+    <string name="portalLink">https://gofar.sunyulster.edu</string>
+    <string-array name="portalList">
+        <item>@string/portalTitle</item>
+        <item>@string/portalDesc</item>
+        <item>@string/portalLink</item>
+    </string-array>
+
+    <string name="publicSafetyTitle">Public Safety</string>
+    <string name="publicSafetyDesc">Students, faculty, staff and visitors can feel safe and secure in our close-knit community campus protected by our Office of Public Safety and Security.\nHasbrouck Hall Lobby</string>
+    <string name="publicSafetyLink">https://www.sunyulster.edu/campus_and_culture/safety_security/</string>
+    <string name="publicSafetyPhone">845–687–5053</string>
+    <string name="publicSafetyEmail">freerw@sunyulster.edu</string>
+    <string-array name="publicSafetyList">
+        <item>@string/publicSafetyTitle</item>
+        <item>@string/publicSafetyDesc</item>
+        <item>@string/publicSafetyLink</item>
+        <item>@string/publicSafetyPhone</item>
+        <item>@string/publicSafetyEmail</item>
+    </string-array>
+
     <array name="resourcesArrayArray">
-        <item>@array/srMapList</item>
-        <item>@array/kcMapList</item>
+        <item>@array/bookstoreList</item>
         <item>@array/childcareList</item>
         <item>@array/diningList</item>
-        <item>@array/bookstoreList</item>
-        <item>@array/counselingList</item>
-        <item>@array/freshStartList</item>
-        <item>@array/safeSpaceList</item>
-        <item>@array/foodPantryList</item>
-        <item>@array/tutorList</item>
-    </array>
+        <item>@array/nurseList</item>
+        <item>@array/portalList</item>
+        <item>@array/publicSafetyList</item>
+        <item>@array/srMapList</item>
+        <item>@array/kcMapList</item>
+            </array>
 
     <!-- Financial -->
     <string name="givingTitle">Giving</string>
@@ -319,16 +358,6 @@
     </array>
 
     <!--Offices -->
-    <string name="nurseTitle">"Nurse"</string>
-    <string name="nurseDesc">"The place to go if you need first aid treatment, medical emergency care, blood pressure checks, health information, treatment referrals, immunization requirements and onsite clinics.\nSEN 139"</string>
-    <string name="nurseLink">"https://www.sunyulster.edu/campus_and_culture/campus_resources/health_services"</string>
-    <string name="nursePhone">"845–687–5246"</string>
-    <string-array name="nurseList">
-        <item>@string/nurseTitle</item>
-        <item>@string/nurseDesc</item>
-        <item>@string/nurseLink</item>
-        <item>@string/nursePhone</item>
-    </string-array>
 
     <string name="disabilityTitle">Disabilities Office</string>
     <string name="disabilityDesc">Students with disabilities can come here to discuss their needs and accommodations that must be made in advance.\nVAN 101</string>
@@ -350,17 +379,6 @@
         <item>@string/trioDesc</item>
         <item>@string/trioLink</item>
         <item>@string/trioPhone</item>
-    </string-array>
-
-    <string name="publicSafetyTitle">Public Safety</string>
-    <string name="publicSafetyDesc">At SUNY Ulster, students, faculty, staff and visitors can feel safe and secure in our close-knit community campus protected by our Office of Public Safety and Security.\nHASBROUCK HALL LOBBY</string>
-    <string name="publicSafetyLink">https://www.sunyulster.edu/campus_and_culture/safety_security/</string>
-    <string name="publicSafetyPhone">845–687–5053</string>
-    <string-array name="publicSafetyList">
-        <item>@string/publicSafetyTitle</item>
-        <item>@string/publicSafetyDesc</item>
-        <item>@string/publicSafetyLink</item>
-        <item>@string/publicSafetyPhone</item>
     </string-array>
 
     <string name="careerTitle">Career Services</string>
@@ -395,10 +413,8 @@
     </string-array>
 
     <array name="officesArrayArray">
-        <item>@array/nurseList</item>
         <item>@array/disabilityList</item>
         <item>@array/trioList</item>
-        <item>@array/publicSafetyList</item>
         <item>@array/careerList</item>
         <item>@array/learningList</item>
         <item>@array/openLabsList</item>
@@ -512,7 +528,7 @@
         <item>@array/majorList</item>
     </array>
 
-    <!-- Schedule/Class info-->
+    <!-- Schedule/Class home_info-->
     <string name="catalogTitle">College Catalog</string>
     <string name="catalogDesc">See the upcoming classes that you can take at SUNY Ulster.</string>
     <string name="catalogLink">http://catalog.sunyulster.edu/</string>

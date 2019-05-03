@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toStartOf="@+id/homeButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/homeButton"
-        app:srcCompat="@drawable/person" />
+        app:srcCompat="@drawable/nav_person" />
 
     <ImageButton
         android:id="@+id/homeButton"
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.97"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/nav_home" />
 
     <ImageButton
         android:id="@+id/locationButton"
@@ -40,5 +40,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/homeButton"
         app:layout_constraintTop_toTopOf="@+id/homeButton"
-        app:srcCompat="@drawable/location" />
+        app:srcCompat="@drawable/nav_location" />
 </android.support.constraint.ConstraintLayout>

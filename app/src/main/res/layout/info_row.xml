@@ -7,17 +7,17 @@
     android:orientation="horizontal">
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/info_row_cl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_item_background">
 
         <TextView
             android:id="@+id/info_title"
             android:layout_width="0dp"
             android:layout_height="40sp"
             android:layout_marginStart="40dp"
-            android:background="@drawable/menu_item_background"
             android:gravity="center_vertical|start"
-            android:onClick="onItemClick"
             android:textAlignment="textStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
             android:textStyle="bold"
@@ -28,10 +28,9 @@
             tools:text="Hello" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/info_item_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/menu_item_background"
             android:contentDescription="@string/iconText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/info_title"
