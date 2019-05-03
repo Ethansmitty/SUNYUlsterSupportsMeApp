@@ -77,9 +77,12 @@ public class navFragment extends Fragment implements View.OnClickListener {
                 startActivity(mapIntent);
                 break;
 
-            case R.id.profileButton :
-                //TODO Do something
+            case R.id.profileButton : {
+                Intent homeIntent = new Intent(this.getContext(), CalendarMain.class);
+                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Clears stack when going home
+                startActivity(homeIntent);
                 break;
+            }
         }
     }
 
