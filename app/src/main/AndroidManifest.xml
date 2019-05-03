@@ -55,6 +55,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.sunyulstercs.supportsmeapp.MainActivity" />
         </activity>
+        <activity android:name=".CalendarMain"></activity>
+        <activity android:name="org.sunyulstercs.supportsmeapp.CalendarActivity"></activity>
     </application>
 
 </manifest>
