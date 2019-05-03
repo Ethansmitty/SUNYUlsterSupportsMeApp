@@ -53,8 +53,12 @@
         </activity>
         <activity android:name=".DetailActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".CalendarMain"></activity>
-        <activity android:name="org.sunyulstercs.supportsmeapp.CalendarActivity"></activity>
+
+        <activity android:name=".CalendarMain"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="org.sunyulstercs.supportsmeapp.CalendarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

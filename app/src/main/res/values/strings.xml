@@ -40,4 +40,6 @@
     <string name="moreInfoButtonText">Info</string>
     <string name="infoLinkButtonText">Website</string>
     <string name="infoPhoneButtonText">Call</string>
+    <string name="goToCalendarText">Go to Calendar</string>
+    <string name="dateText">Date</string>
 </resources>
