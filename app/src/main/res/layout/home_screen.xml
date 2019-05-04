@@ -73,19 +73,19 @@
 
     <ImageButton
         android:id="@+id/socialMediaButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/socialMediaButtonDesc"
         android:onClick="onClick"
-        app:layout_constraintBottom_toTopOf="@+id/officesButton"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/financialLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/financialButton"
         app:layout_constraintVertical_bias="0.75"
         app:srcCompat="@drawable/home_u" />
 
@@ -168,19 +168,19 @@
 
     <ImageButton
         android:id="@+id/libraryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/libraryButtonDesc"
         android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/officesLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/officesButton"
         app:srcCompat="@drawable/home_book" />
 
     <TextView
@@ -231,20 +231,19 @@
 
     <ImageButton
         android:id="@+id/scheduleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/scheduleButtonDesc"
         android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/officesButton"
-        app:layout_constraintVertical_bias="0.256"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/studentLifeLabel"
+        app:layout_constraintEnd_toStartOf="@+id/transportationButton"
+        app:layout_constraintStart_toEndOf="@+id/studentLifeButton"
+        app:layout_constraintTop_toTopOf="@+id/studentLifeButton"
         app:srcCompat="@drawable/home_calendar" />
 
     <TextView
@@ -272,6 +271,7 @@
         android:background="@android:color/transparent"
         android:contentDescription="@string/transportationButtonDesc"
         android:onClick="onClick"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/officesButton"

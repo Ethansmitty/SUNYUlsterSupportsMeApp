@@ -40,7 +40,7 @@ import java.util.Objects;
 
 import static com.google.android.gms.maps.GoogleMap.*;
 
-public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerDragListener, AdapterView.OnItemSelectedListener {
+public class MapActivity extends FragmentActivity implements OnMapReadyCallback, AdapterView.OnItemSelectedListener {
 
 	private GoogleMap mMap;
 	private static final int MY_PERMISSION_FINE_LOCATION = 101;
@@ -90,7 +90,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	public void onMapReady(GoogleMap googleMap) {
 		mMap = googleMap;
 		mMap.getUiSettings().setZoomControlsEnabled(true);
-		mMap.setOnMarkerDragListener(this);
 
 		LatLngBounds ULSTER = new LatLngBounds(new LatLng(41.849423, -74.133734), new LatLng(41.853426, -74.126084));
 
@@ -162,12 +161,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 				if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 					mMap.setMyLocationEnabled(true);
 					displayLocationSettingsRequest(this);
-					Toast.makeText(this, "User nav_location enabled", Toast.LENGTH_LONG).show();
+					Toast.makeText(this, "User location enabled", Toast.LENGTH_LONG).show();
 					//TODO Make this work on first run
 				}
 			} else {
 				//If no permission, just don't use the marker
-				Toast.makeText(this, "User nav_location disabled", Toast.LENGTH_LONG).show();
+				Toast.makeText(this, "User location disabled", Toast.LENGTH_LONG).show();
 			}
 		}
 	}
@@ -211,21 +210,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 				}
 			}
 		});
-	}
-
-	@Override
-	public void onMarkerDragStart(Marker marker) {
-
-	}
-
-	@Override
-	public void onMarkerDrag(Marker marker) {
-		Toast.makeText(this, marker.getPosition().toString(), Toast.LENGTH_SHORT).show();
-	}
-
-	@Override
-	public void onMarkerDragEnd(Marker marker) {
-		Toast.makeText(this, marker.getPosition().toString(), Toast.LENGTH_LONG).show();
 	}
 
 	@Override
