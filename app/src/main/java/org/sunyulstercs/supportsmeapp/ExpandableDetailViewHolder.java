@@ -5,12 +5,15 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
+/**
+ * This view holder holds the "expanded" view of an L2 menu item
+ * @author Ethan Smith
+ * @since 04/12/2019
+ */
 class ExpandableDetailViewHolder extends ChildViewHolder
 {
-    //This is where you add new stuff, like buttons
     private Button moreInfoButton;
     private Button websiteButton;
     private Button phoneButton;

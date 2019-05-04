@@ -11,15 +11,13 @@ public class CalendarMain extends AppCompatActivity {
 
     private static final String TAG = "Main Activity";
 
-    private TextView theDate;
-
-    private Button btnGoCalendar;
+	private Button btnGoCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar_main);
-        theDate = (TextView) findViewById(R.id.date);
+		TextView theDate = (TextView) findViewById(R.id.date);
         btnGoCalendar = (Button) findViewById(R.id.btnGoCalendar);
 
         Intent incomingIntent = getIntent();

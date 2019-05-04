@@ -2,6 +2,7 @@ package org.sunyulstercs.supportsmeapp;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,11 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
+/**
+ * Level 3 activity
+ * @author Ethan Smith
+ * @since 04/18/2019
+ */
 public class DetailActivity extends AppCompatActivity
 {
     InfoItem info;
@@ -34,6 +40,7 @@ public class DetailActivity extends AppCompatActivity
 
         info = (InfoItem) Objects.requireNonNull(getIntent().getExtras()).get("InfoItem");
 
+        //Set up views
         departmentIcon = findViewById(R.id.department_icon);
         departmentBanner = findViewById(R.id.department_banner);
         departmentLabelText = findViewById(R.id.department_label_text);
@@ -56,6 +63,7 @@ public class DetailActivity extends AppCompatActivity
         departmentLabelText.setText(info.getTitle());
         departmentDescText.setText(info.getDesc());
 
+        //if phonenumber exists, set up call button
         if (info.hasPhoneNumber())
         {
             departmentPhoneText.setText(info.getPhoneNumber());
@@ -70,6 +78,7 @@ public class DetailActivity extends AppCompatActivity
         }
 
 
+        //if email exists, set up email button
         if (info.hasEmail())
         {
             departmentEmailText.setText(info.getEmail());
@@ -84,6 +93,22 @@ public class DetailActivity extends AppCompatActivity
                     startActivity(Intent.createChooser(intent, "Send mail..."));
                 }
             });
+        }
+
+        //if thumbnail exists, set up icon ImageView
+        if (info.hasIconID())
+        {
+            departmentIcon.setImageDrawable(departmentIcon.getContext().getDrawable(info.getIconID()));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            {
+                departmentIcon.setColorFilter(departmentIcon.getContext().getColor(R.color.colorHomeButtons));
+            }
+        }
+
+        //if banner image exists, set up banner imageview
+        if (info.hasBanner())
+        {
+            departmentBanner.setImageDrawable(departmentBanner.getContext().getDrawable(info.getBannerID()));
         }
 
     }

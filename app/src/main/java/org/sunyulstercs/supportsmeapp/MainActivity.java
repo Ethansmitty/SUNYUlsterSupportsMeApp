@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
 
@@ -24,10 +27,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(view.getId())
         {
             case R.id.campusResourceButton :
-
-                intent.putExtra("CategoryData", R.array.resourcesArrayArray);
-                intent.putExtra("CategoryImage", R.drawable.home_building);
-                intent.putExtra("ActivityName", getResources().getString(R.string.campusResourcesButtonDesc));
+                //Currently only campus resources category has images
+                intent.putExtra("CategoryData", R.array.resourcesArrayArray);                                             //String data
+                intent.putExtra("CategoryImage", R.drawable.home_building);                                               //Int ID for drawable
+                intent.putExtra("ActivityName", getResources().getString(R.string.campusResourcesButtonDesc));            //String data
+                intent.putExtra("DetailIcons", R.array.resourcesIconsArray);                                              //Array of int IDs for drawable
+                intent.putExtra("DetailBanners", R.array.resourcesBannerArray);                                           //Array of int IDs for drawable
                 break;
 
             case R.id.financialButton :
@@ -78,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("ActivityName", getResources().getString(R.string.transportationButtonDesc));
                 break;
         }
-        Log.d(view.toString(), "Starting activity...");
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); //If activity is in the stack somewhere, reuse it.
         startActivity(intent);
     }

@@ -3,7 +3,11 @@ package org.sunyulstercs.supportsmeapp;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
+/**
+ * A class to store the content of a single L3 page
+ * @author Ethan Smith
+ * @since 04/12/2019
+ */
 public class InfoItem implements Parcelable
 {
     private String title;
@@ -11,7 +15,13 @@ public class InfoItem implements Parcelable
     private String link;
     private String phoneNumber;
     private String email;
+    private int iconID;
+    private int bannerID;
 
+    /**
+     * This is clunky, and I'm not happy about it, but it works.
+     * @param items String array of items in the following order: title, description, link, phone number, email
+     */
     InfoItem(String[] items)
     {
         this.title = items[0];
@@ -50,42 +60,45 @@ public class InfoItem implements Parcelable
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     String getDesc() {
         return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
     }
 
     String getLink() {
         return link;
     }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
-
     String getPhoneNumber() {
         return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    void setIconID(int iconID)
+    {
+        this.iconID = iconID;
     }
 
+    int getIconID()
+    {
+        return iconID;
+    }
+
+    void setBannerID(int bannerID)
+    {
+        this.bannerID = bannerID;
+    }
+
+    int getBannerID()
+    {
+     return this.bannerID;
+    }
+
+    /**
+     * @return Phone number formatted to be accepted by a Uri for Intent
+     */
     String getFormattedPhoneNumber()
     {
         StringBuilder sb = new StringBuilder();
@@ -93,7 +106,12 @@ public class InfoItem implements Parcelable
         {
             sb.append("tel:");
             sb.append(this.phoneNumber);
+            //remove garbage characters
             sb.deleteCharAt(sb.indexOf("–"));
+            sb.deleteCharAt(sb.indexOf("-"));
+            sb.deleteCharAt(sb.indexOf(" "));
+            sb.deleteCharAt(sb.indexOf("("));
+            sb.deleteCharAt(sb.indexOf(")"));
         }
         return sb.toString();
     }
@@ -113,29 +131,47 @@ public class InfoItem implements Parcelable
         return this.email != null;
     }
 
+    boolean hasIconID()
+    {
+        return this.iconID != 0;
+    }
+
+    boolean hasBanner()
+    {
+        return this.bannerID != 0;
+    }
+
     @Override
-    public int describeContents() {
+    public int describeContents()
+    {
         return 0;
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    public void writeToParcel(Parcel dest, int flags)
+    {
         dest.writeString(this.title);
         dest.writeString(this.desc);
         dest.writeString(this.link);
         dest.writeString(this.phoneNumber);
         dest.writeString(this.email);
+        dest.writeInt(this.iconID);
+        dest.writeInt(this.bannerID);
     }
 
-    private InfoItem(Parcel in) {
+    private InfoItem(Parcel in)
+    {
         this.title = in.readString();
         this.desc = in.readString();
         this.link = in.readString();
         this.phoneNumber = in.readString();
         this.email = in.readString();
+        this.iconID = in.readInt();
+        this.bannerID = in.readInt();
     }
 
-    public static final Parcelable.Creator<InfoItem> CREATOR = new Parcelable.Creator<InfoItem>() {
+    public static final Parcelable.Creator<InfoItem> CREATOR = new Parcelable.Creator<InfoItem>()
+    {
         @Override
         public InfoItem createFromParcel(Parcel source) {
             return new InfoItem(source);

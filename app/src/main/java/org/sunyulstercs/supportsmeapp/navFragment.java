@@ -11,12 +11,13 @@ import android.widget.ImageButton;
 
 
 /**
- * A simple {@link Fragment} subclass.
- *
- * Use the {@link navFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * A fragment to provide navigation functionaility for any activity
+ * @author Ethan Smith
+ * @since 03/04/2019
  */
-public class navFragment extends Fragment implements View.OnClickListener {
+@SuppressWarnings("FieldCanBeLocal")
+public class navFragment extends Fragment implements View.OnClickListener
+{
 
 	private ImageButton homeButton, profileButton, locationButton;
 	public navFragment() {
@@ -45,6 +46,7 @@ public class navFragment extends Fragment implements View.OnClickListener {
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_nav, container, false);
 
+		//Set up buttons
 		homeButton = view.findViewById(R.id.homeButton);
 		locationButton = view.findViewById(R.id.locationButton);
 		profileButton = view.findViewById(R.id.profileButton);
@@ -62,10 +64,10 @@ public class navFragment extends Fragment implements View.OnClickListener {
 		switch (view.getId())
 		{
 			case R.id.homeButton :
-				if (!(getActivity() instanceof MainActivity))  //If we're already nav_home, do nothing
+				if (!(getActivity() instanceof MainActivity))  //If we're already home, do nothing
 				{
 					Intent homeIntent = new Intent(this.getContext(), MainActivity.class);
-					homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Clears stack when going nav_home
+					homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //Clears stack when going home
 					startActivity(homeIntent);
 				}
 
@@ -77,7 +79,7 @@ public class navFragment extends Fragment implements View.OnClickListener {
 				startActivity(mapIntent);
 				break;
 
-            case R.id.profileButton :
+            case R.id.profileButton : //Profile button goes to calendar for now
 				if (!(getActivity() instanceof CalendarMain))
 				{
                     Intent calIntent = new Intent(this.getContext(), CalendarMain.class);

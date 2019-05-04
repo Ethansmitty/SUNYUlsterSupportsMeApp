@@ -11,5 +11,6 @@
     <color name="colorMenuRows">#FFF1D7</color>
     <color name="colorBackground">#424242</color>
     <color name="colorTextMenuClicked">#58330a</color>
+	<color name="colorTextDefault">#000000</color>
     <color name="colorInfoItemButton">#a8c6fa</color>
 </resources>
