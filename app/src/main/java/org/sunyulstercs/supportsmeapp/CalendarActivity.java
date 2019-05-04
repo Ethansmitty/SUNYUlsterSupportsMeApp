@@ -10,31 +10,26 @@ import android.widget.CalendarView;
 
 public class CalendarActivity extends AppCompatActivity {
 
-    private static final String TAG = "CalendarActivity";
+	private static final String TAG = "CalendarActivity";
 
 
 	@Override
-    protected void onCreate(@Nullable Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendar_layout);
+	protected void onCreate(@Nullable Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.calendar_layout);
 		CalendarView mCalendarView = findViewById(R.id.calendarView);
 
-        mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
-                String date = month + "/" + dayOfMonth + "/" + year;
-                Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy: " + date);
+		mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+			@Override
+			public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
+				String date = month + "/" + dayOfMonth + "/" + year;
+				Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy: " + date);
 
-                Intent intent = new Intent(CalendarActivity.this, CalendarMain.class);
-                intent.putExtra("date", date);
-                startActivity(intent);
-
-
-            }
-
-        });
-
-
-    }
+				Intent intent = new Intent(CalendarActivity.this, CalendarMain.class);
+				intent.putExtra("date", date);
+				startActivity(intent);
+			}
+		});
+	}
 
 }
